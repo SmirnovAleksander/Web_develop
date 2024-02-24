@@ -1,29 +1,18 @@
-
-
 body {
     margin: 0;
     padding: 0;
     max-width: 1440px;
     margin: 0px auto;
+    font-weight: 400;
 }
-
 
 header{
     max-height: 74px;
-}
-
-.header-list {
-    list-style: none;
-    display: flex;
-}
-
-a {
-    color: black;
-    text-decoration: none;
+    position: absolute;
 }
 
 .header-conteiner {
-    padding: 17px 250px 17px 250px;
+    padding: 17px 250px;
     max-width: 940px;
     max-height: 40px;
     display: flex;
@@ -34,78 +23,400 @@ a {
 .title-escape {
     font-family: 'Lora', serif;
     font-size: 26px;
-    margin: 11px 471px 11px 0; 
+    margin: 13px 471px 0 0; 
     cursor: pointer;
+}
+
+.top-list {
+    list-style: none;
+    display: flex;
 }
 
 .nav-title {
     font-family: 'Oxygen', serif;
     font-size: 12px;
-    padding: 15px 20px 15px 20px;
+    margin: 15px 20px;
     cursor: pointer;
     text-transform: uppercase;
 }
 
-/*saddf*/
-.title {
-    height: 286px;
+a {
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 .title-conteiner {
     max-width: 940px;
     max-height: 159px;
     padding: 89px 250px 38px 250px;
-    
+    color: #FFFFFF;
 }
 
-.road-ahead {
+.title {
     font-size: 50px;
-    font-family: 'Lora', serif;
-    margin-top: 7px;
+    font-family: 'Lora', serif;    
+    text-align: center;
     margin-bottom: 0px;
-    text-align: center; 
+    margin-top: 0px;
 }
 
-.road-ahead-under {
+.title__under {
     font-family: 'Oxygen', sans-serif;
     font-size: 17px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    color: rgba(255, 255, 255, 0.63);
+}
+.posts-button {
+    display: flex;
+    justify-content: center;
 }
 
-.main-text-block {
-    max-height: 1706px;
-    max-width: 1440px;
-}
-
-
-.text-block {
-    margin: 148px 240px 168px 240px;
-    line-height: 35px;
-    font-size: 24px;
+.latest-posts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 300;
+    width: 167px;
+    height: 44px;
+    background-color: #DD783F;
+    border-radius: 3px;
     font-family: 'Oxygen', sans-serif;
 }
+ 
+.main-back {
+    line-height: 0;
+}
+/*  Menu Bar*/
+.menu-bar {
+    max-height: 65px;
+}
 
+.menu-bar__conteiner {
+    display: flex;
+    margin: 9px 240px 10px 240px;
+
+}
+
+.menu-bar__block {
+    width: 139px;
+    height: 46px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.menu-bar__block p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Lora', serif; 
+    color: #768088;
+}
+
+/* Footer */
 footer {
     height: 89px;
-    width: 1440px;
     background-image: url('./img/Footer.png');
+    display: block;
 }
 
 .footer-conteiner {
-    width: 960px;
-    height: 34px;
-    padding: 28px 240px 27px 240px;
+    padding: 27px 240px;
+    max-width: 940px;
+    max-height: 34px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.nav-title-footer {
+.nav-title__foot {
     font-family: 'Oxygen', serif;
     font-size: 12px;
-    margin: 14px 10px 9px 10px; 
+    margin: 15px 10px;
     cursor: pointer;
     text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
 }
 
+/* Main Cards */
+
+.main-cards {
+    height: 1255px;
+    background-color: #FFFFFF;
+    background-color: aqua;
+    /* border: 1px solid black; */
+    position: relative;
+}
+
+.main-cards__conteiner1 {
+    width: 940px;
+    height: 414px;
+    background-color: bisque;
+    border: 1px solid black;
+    margin: 0 250px;
+}
+
+.main-cards__conteiner2 {
+    max-width: 940px;
+    height: 752px;
+    background-color: chartreuse;
+    /* border: 1px solid black; */
+    margin: 0 250px;
+}
+
+
+.feature-posts_cards {
+    /* border: 1px solid black; */
+    height: 294px;
+    width: 960px;
+    background-color: #DD783F;
+    position: absolute;
+    top: 120px;
+    left: 240px;
+    display: flex;
+}
+
+/* Big Card */
+
+.big-card {
+    margin: 7px 10px;
+}
+
+.big-card_img {
+    position: relative;
+}
+
+.big-card_conteiner {
+    width: 460px;
+    height: 181px;
+    position: absolute;
+    top: 99px;
+    left: 0;
+    background-color: darkgreen;
+}
+
+.big-card__title {
+    font-family: 'Lora', serif;
+    font-size: 27px;
+    color: #FFFFFF;
+    margin-top: 56px;
+    margin-bottom: 0;
+    margin-left: 20px;
+}
+
+.big-card__title__under {
+    font-family: 'Oxygen', serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 20px;
+}
+
+.big-card__footer_conteiner {
+    width: 420px;
+    height: 35px;
+    background-color: darkmagenta;
+    position: absolute;
+    top: 131px;
+    left: 20px;
+    display: flex;
+}
+
+/* Big Card under */
+
+.big-card__footer_conteiner .big-card-img {
+    margin-top: 5px;
+}
+
+.big-card__footer_conteiner .big-card-name {
+    font-family: 'Oxygen', serif;
+    margin-left: 10px;
+    margin-top: 12px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.big-card__footer_conteiner .big-card-date {
+    font-family: 'Oxygen', serif;
+    margin-top: 12px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Big Card1 under */
+.date-edit1 {
+    margin-left: 208px;
+}
+
+/* Big Card2 under */
+.date-edit2 {
+    margin-left: 190px;
+}
+
+/* Adventure button */
+.adventure-button {
+    width: 87px;
+    height: 26px;
+    background-color: #DD783F;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+}
+
+.adventure-button p {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Title Future posts and Most Recent */
+.feature-posts__conteiner__title {
+    height: 44px;
+    margin: 60px 0;
+    background-color: blueviolet;
+    /* border: 1px solid black; */
+    position: relative;
+}
+
+.feature-posts__title {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.line {
+    width: 188px;
+    height: 1px;
+    background-color: #DEDEDE;
+    position: absolute;
+    bottom: 0;
+    left: 376px;
+}
+
+
+.most-recent_conteiner__title {
+    height: 44px;
+    margin: 60px 0;
+    background-color: cornflowerblue;
+    /* border: 1px solid black; */
+    position: relative;
+}
+
+.most-recent__title {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+/* Most recent cards conteoiner */
+
+.most-recent_cards {
+    /* border: 1px solid black; */
+    height: 632px;
+    width: 960px;
+    background-color: bisque;
+    position: absolute;
+    top: 534px;
+    left: 240px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* Card */
+
+.card-conteiner {
+    width: 296px;
+    height: 291px;
+
+    margin: 6px 12px 12px 12px;
+}
+
+.card-image {
+    line-height: 0;
+}
+
+/* Card header */
+.card-line {
+    width: 296px;
+    height: 1px;
+    margin: 0;
+    background-color: #E5E5E5;
+}
+
+.card-title-conteiner {
+    width: 296px;
+    height: 92px;
+}
+
+.card-title {
+    margin: 0;
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color: #101315;
+    margin-left: 13px;
+    padding-top: 14px;
+}
+
+.card-title-under {
+    font-size: 13px;
+    margin-top: 6px;
+    margin-bottom: 0;
+    font-family: 'Oxygen', sans-serif;
+    margin-left: 13px;
+    color: #7A7A7A;
+    margin-right: 36px;
+}
+
+/* Card footer */
+.card-footer-conteiner {
+    width: 296px;
+    height: 48px;
+    background-color: #FCFCFC;
+    display: flex;
+}
+
+.card-img {
+    margin: 12px 0 10px 13px;
+}
+
+.card-name {
+    margin-left: 10px;
+    font-size: 11px;
+    color: #999999;
+    margin-top: 18px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.card-date {
+    font-family: 'Oxygen', sans-serif;
+    color: #999999;
+    margin-top: 14px;
+    margin-right: 13px;
+}
+
+/* Card edit */
+.date1 {
+    margin-left: 88px;
+}
+
+.date2 {
+    margin-left: 102px;
+}
