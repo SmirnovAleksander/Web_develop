@@ -146,8 +146,9 @@ footer {
 
 .main-cards {
     height: 1255px;
-    background-color: #FFFFFF;
-    background-color: aqua;
+    width: 1440px;
+    background-color: #F7F7F7;
+    /* background-color: aqua; */
     /* border: 1px solid black; */
     position: relative;
 }
@@ -155,15 +156,15 @@ footer {
 .main-cards__conteiner1 {
     width: 940px;
     height: 414px;
-    background-color: bisque;
-    border: 1px solid black;
+    /* background-color: bisque; */
+    /* border: 1px solid black; */
     margin: 0 250px;
 }
 
 .main-cards__conteiner2 {
     max-width: 940px;
-    height: 752px;
-    background-color: chartreuse;
+    max-height: 752px;
+    /* background-color: chartreuse; */
     /* border: 1px solid black; */
     margin: 0 250px;
 }
@@ -173,11 +174,55 @@ footer {
     /* border: 1px solid black; */
     height: 294px;
     width: 960px;
-    background-color: #DD783F;
+    /* background-color: #DD783F; */
     position: absolute;
     top: 120px;
     left: 240px;
     display: flex;
+}
+
+/* Title Future posts and Most Recent */
+.feature-posts__conteiner__title {
+    height: 44px;
+    padding-top: 60px;
+    background-color: #F7F7F7;
+    /* background-color: blueviolet; */
+    /* border: 1px solid black; */
+    position: relative;
+}
+
+.feature-posts__title {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.line {
+    width: 188px;
+    height: 1px;
+    background-color: #DEDEDE;
+    position: absolute;
+    bottom: 0;
+    left: 376px;
+}
+
+
+.most-recent_conteiner__title {
+    height: 44px;
+    margin: 60px 0;
+    /* background-color: cornflowerblue; */
+    /* border: 1px solid black; */
+    position: relative;
+}
+
+.most-recent__title {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
 }
 
 /* Big Card */
@@ -196,7 +241,6 @@ footer {
     position: absolute;
     top: 99px;
     left: 0;
-    background-color: darkgreen;
 }
 
 .big-card__title {
@@ -220,7 +264,7 @@ footer {
 .big-card__footer_conteiner {
     width: 420px;
     height: 35px;
-    background-color: darkmagenta;
+    /* background-color: darkmagenta; */
     position: absolute;
     top: 131px;
     left: 20px;
@@ -282,56 +326,13 @@ footer {
 }
 
 
-/* Title Future posts and Most Recent */
-.feature-posts__conteiner__title {
-    height: 44px;
-    margin: 60px 0;
-    background-color: blueviolet;
-    /* border: 1px solid black; */
-    position: relative;
-}
-
-.feature-posts__title {
-    font-family: 'Oxygen', sans-serif;
-    font-size: 20px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    text-align: center;
-}
-
-.line {
-    width: 188px;
-    height: 1px;
-    background-color: #DEDEDE;
-    position: absolute;
-    bottom: 0;
-    left: 376px;
-}
-
-
-.most-recent_conteiner__title {
-    height: 44px;
-    margin: 60px 0;
-    background-color: cornflowerblue;
-    /* border: 1px solid black; */
-    position: relative;
-}
-
-.most-recent__title {
-    font-family: 'Oxygen', sans-serif;
-    font-size: 20px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    text-align: center;
-}
-
 /* Most recent cards conteoiner */
 
 .most-recent_cards {
     /* border: 1px solid black; */
     height: 632px;
     width: 960px;
-    background-color: bisque;
+    /* background-color: bisque; */
     position: absolute;
     top: 534px;
     left: 240px;
@@ -364,6 +365,7 @@ footer {
 .card-title-conteiner {
     width: 296px;
     height: 92px;
+    background-color: #FFFFFF;
 }
 
 .card-title {
