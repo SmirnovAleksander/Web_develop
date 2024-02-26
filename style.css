@@ -112,12 +112,13 @@ a {
     height: 46px;
     margin-left: 10px;
     margin-right: 10px;
-}
-
-.menu-bar__block p {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.menu-bar__block a {
+    
     font-size: 14px;
     font-weight: 300;
     font-family: 'Lora', serif; 
