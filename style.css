@@ -32,14 +32,21 @@ header{
     display: flex;
 }
 
-.nav-title {
-    font-family: 'Oxygen', serif;
-    font-size: 12px;
-    margin: 15px 20px;
+.top-list li {
     cursor: pointer;
     text-transform: uppercase;
+    font-family: Oxygen;
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
 }
 
+.foot-edit li{
+    margin: 15px 10px;
+}
+.head-edit li{
+    margin: 15px 20px;
+}
 a {
     color: #FFFFFF;
     text-decoration: none;
@@ -119,9 +126,9 @@ a {
 
 /* Footer */
 footer {
-    height: 89px;
-    background-image: url('./img/Footer.png');
-    display: block;
+    background: url(./img/Footer.png) 
+    rgba(35, 47, 56, 0.6);
+    background-blend-mode: multiply;
 }
 
 .footer-conteiner {
@@ -135,11 +142,12 @@ footer {
 
 .nav-title__foot {
     font-family: 'Oxygen', serif;
-    font-size: 12px;
+    font-size: 11px;
     margin: 15px 10px;
     cursor: pointer;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
 }
 
 /* Main Cards */
@@ -191,7 +199,7 @@ footer {
     position: relative;
 }
 
-.feature-posts__title {
+.feature-posts__conteiner__title p{
     font-family: 'Oxygen', sans-serif;
     font-size: 20px;
     margin-top: 0px;
@@ -217,7 +225,7 @@ footer {
     position: relative;
 }
 
-.most-recent__title {
+.most-recent_conteiner__title p {
     font-family: 'Oxygen', sans-serif;
     font-size: 20px;
     margin-top: 0px;
@@ -261,7 +269,7 @@ footer {
     margin-left: 20px;
 }
 
-.big-card__footer_conteiner {
+.big-card__footer__conteiner {
     width: 420px;
     height: 35px;
     /* background-color: darkmagenta; */
@@ -273,11 +281,11 @@ footer {
 
 /* Big Card under */
 
-.big-card__footer_conteiner .big-card-img {
+.big-card__footer__conteiner .big-card-img {
     margin-top: 5px;
 }
 
-.big-card__footer_conteiner .big-card-name {
+.big-card__footer__conteiner .big-card-name {
     font-family: 'Oxygen', serif;
     margin-left: 10px;
     margin-top: 12px;
@@ -285,7 +293,7 @@ footer {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.big-card__footer_conteiner .big-card-date {
+.big-card__footer__conteiner .big-card-date {
     font-family: 'Oxygen', serif;
     margin-top: 12px;
     font-size: 12px;
@@ -302,11 +310,9 @@ footer {
     margin-left: 190px;
 }
 
-/* Adventure button */
-.adventure-button {
-    width: 87px;
+/* big-card button */
+.big-card-button {
     height: 26px;
-    background-color: #DD783F;
     position: absolute;
     top: 20px;
     left: 20px;
@@ -315,16 +321,30 @@ footer {
     justify-content: center;
 }
 
-.adventure-button p {
+.big-card-button p {
     text-transform: uppercase;
     color: #FFFFFF;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 400;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: Oxygen;
+    
+
 }
 
+/* Edit btn  */
+
+.btn1 {
+    width: 108px;
+    background-color: #A872B7;
+}
+
+.btn2 {
+    width: 87px;
+    background-color: #DD783F;
+}
 
 /* Most recent cards conteoiner */
 
@@ -362,13 +382,13 @@ footer {
     background-color: #E5E5E5;
 }
 
-.card-title-conteiner {
+.card-title {
     width: 296px;
     height: 92px;
     background-color: #FFFFFF;
 }
 
-.card-title {
+.card-title__name {
     margin: 0;
     font-family: 'Lora', serif;
     font-size: 16px;
@@ -377,7 +397,7 @@ footer {
     padding-top: 14px;
 }
 
-.card-title-under {
+.card-title__description {
     font-size: 13px;
     margin-top: 6px;
     margin-bottom: 0;
