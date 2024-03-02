@@ -16,17 +16,19 @@ body {
     background-image: url(./img/MainBack.png);
     background-size: 100% 100%;
     max-width: 100%;
-    height: 500px;
+    /* height: 500px; */
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    padding-bottom: 130px;
 }
 .fotter-wrapper {
     background-image: url(./img/Footer.png);
     background-size: 100% 100%;
+    color: rgba(red, green, blue, 0.6);
     max-width: 100%;
-    height: 89px;
+    /* height: 89px; */
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -41,12 +43,20 @@ body {
     padding-top: 17px;
 }
 
+.title-escape {
+    /* padding-top: 5px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .footer-conteiner {
     width: 960px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 17px;
+    padding-top: 23px;
+    padding-bottom: 18px;
 }
 
 .top-list ul {
