@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/post.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
     <header>
         <div class="header-conteiner">
             <div class="title-escape">
-                <img src="./img/Escape..svg">
+                <img src="./images/img_post/Escape.svg">
             </div>
             <nav class="header-nav">
                 <ul class="header-list">
@@ -31,7 +31,7 @@
             <p class="road-ahead-under">The road ahead might be paved - it might not be.</p>
         </div>
     </div>
-    <img src="./img/MainBack.png" alt="hi">
+    <img src="./images/img_post/MainBack.png" alt="hi">
     <div class="main-text-block">
         <div class="text-block">
             <p>
@@ -95,7 +95,7 @@
     <footer>
         <div class="footer-conteiner">
             <div class="title-escape">
-                <img src="./img/Escape..svg">
+                <img src="./images/img_post/Escape.svg">
             </div>
             <nav class="header-nav">
                 <ul class="header-list">

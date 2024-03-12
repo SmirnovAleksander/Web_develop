@@ -4,6 +4,7 @@
     border: 0;
     list-style: none;
     text-decoration: none;
+    /* margin: 0; */
 }
 
 body {
@@ -13,7 +14,7 @@ body {
 }
 
 .header-wrapper {
-    background-image: url(./img/MainBack.png);
+    background-image: url(../images/img-home/MainBack.png);
     background-size: 100% 100%;
     max-width: 100%;
     /* height: 500px; */
@@ -24,7 +25,7 @@ body {
     padding-bottom: 130px;
 }
 .fotter-wrapper {
-    background-image: url(./img/Footer.png);
+    /* background-image: url(./images/img_home/Footer.png); */
     background-size: 100% 100%;
     color: rgba(red, green, blue, 0.6);
     max-width: 100%;
@@ -147,7 +148,7 @@ a {
 
 /* Footer */
 footer {
-    background: url(./img/Footer.png) 
+    background: url(../images/img-home/Footer.png) 
     rgba(35, 47, 56, 0.6);
     background-blend-mode: multiply;
 }
@@ -304,53 +305,38 @@ footer {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* Big Card1 under */
-.date-edit1 {
-    margin-left: 208px;
+.big-card-footer_block {
+    /* margin-left: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 390px;
+    /* height: 35px; */
 }
 
-/* Big Card2 under */
-.date-edit2 {
-    margin-left: 190px;
-}
-
-/* big-card button */
 .big-card-button {
-    height: 26px;
     position: absolute;
     top: 20px;
     left: 20px;
+    padding: 6px 9px 5px;
+    display: block;
     border-radius: 2px;
-    display: flex;
-    justify-content: center;
-}
-
-.big-card-button p {
-    text-transform: uppercase;
-    color: #FFFFFF;
-    font-size: 12px;
+    /* background-color: aqua; */
     font-weight: 400;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Oxygen;
-    
-
+    font-size: 12px;
+    color: #FFFFFF;
+    text-transform: uppercase; 
+    margin: 0;  
 }
 
-/* Edit btn  */
-
-.btn1 {
-    width: 108px;
+.photography {
     background-color: #A872B7;
 }
 
-.btn2 {
-    width: 87px;
+.adventure {
     background-color: #DD783F;
 }
 
-/* Most recent cards conteoiner */
 
 .most-recent_cards {
     max-width: 960px;

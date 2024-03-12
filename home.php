@@ -1,9 +1,32 @@
+<?php
+$posts = [
+ [
+   'title' => 'The Road Ahead',
+   'subtitle' => 'The road ahead might be paved - it might not be.',
+   'img_modifier' => './images/img-home/Cards/IMAGEMen1.png',
+   'author' => 'Mat Vogels',
+   'date' => 'September 25, 2015',
+   'title-btn' => 'Photography',
+   'class-color-btn' => 'photography',
+ ],
+ [
+    'title' => 'From Top Down',
+    'subtitle' => 'Once a year, go someplace you’ve never been before.',
+    'img_modifier' => './images/img-home/Cards/IMAGEMen2.png',
+    'author' => 'William Wong',
+    'date' => 'September 25, 2015',
+    'title-btn'=> 'Adventure',
+    'class-color-btn' => 'adventure',
+  ],
+];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
@@ -14,7 +37,7 @@
         <div class="header-wrapper">
             <div class="header-conteiner">
                 <div>
-                    <img src="./img/Escape.svg" alt="Escape.">
+                    <img src="./images/img-home/Escape.svg" alt="Escape.">
                 </div>
                 <nav class="top-list head-edit">
                     <ul>
@@ -73,44 +96,12 @@
                 <hr class="line">  
             </div>
             <nav class="feature-posts-cards">
-                <a href="./Lab_1/index.html">
-                    <div class="big-card">
-                        <img src="./img/TheRoadAhead.png" alt="The Road Ahead">
-                        <div class="big-card_conteiner">
-                            <p class="big-card__title">The Road Ahead</p>
-                            <p class="big-card__title__under">
-                                The road ahead might be paved - it might not be.
-                            </p>
-                            <div class="big-card__footer__conteiner">
-                                <img class="big-card-img" src="./img/Cards/IMAGEMen1.png" alt="Men1">
-                                <p class="big-card-name">Mat Vogels</p>
-                                <p class="big-card-date date-edit1">September 25, 2015</p>
-                            </div>
-                        </div>
-                        <div class="big-card-button btn1">
-                            <p>Photography</p>
-                        </div>
-                    </div>
-                </a>    
-                <a>
-                    <div class="big-card">
-                        <img src="./img/FromTopDown.png" alt="FromTopDown">
-                        <div class="big-card_conteiner">
-                            <p class="big-card__title">From Top Down</p>
-                            <p class="big-card__title__under">
-                                Once a year, go someplace you’ve never been before.
-                            </p>
-                            <div class="big-card__footer__conteiner">
-                                <img class="big-card-img" src="./img/Cards/IMAGEMen2.png" alt="Men2">
-                                <p class="big-card-name">William Wong</p>
-                                <p class="big-card-date date-edit2">September 25, 2015</p>                            
-                            </div>
-                        </div>
-                        <div class="big-card-button btn2">
-                            <p>Adventure</p>
-                        </div>
-                    </div>
-                </a>
+            <?php 
+                foreach ($posts as $post) {
+                    include 'featured_post.php';
+                }
+            ?>
+
             </nav>
         </div>
         <div class="main-cards__conteiner2">
@@ -121,7 +112,7 @@
             <nav class="most-recent_cards">
                 <div class="card-conteiner">
                     <div class="card-image">
-                        <img src="./img/Cards/IMAGE1.png" alt="IMAGE1">
+                        <img src="./images/img-home/Cards/IMAGE1.png" alt="IMAGE1">
                     </div>
                     <div class="card-line"></div>
                     <div class="card-title">
@@ -130,7 +121,7 @@
                     </div>
                     <div class="card-line"></div>
                     <div class="card-footer-conteiner">
-                        <img class="card-img" src="./img/Cards/IMAGEMen2.png" alt="Still Standing Tall">
+                        <img class="card-img" src="./images/img-home/Cards/IMAGEMen2.png" alt="Still Standing Tall">
                         <p class="card-name">William Wong</p>
                         <p class="card-date date1">9/25/2015</p>
                     </div>
@@ -138,7 +129,7 @@
     
                 <div class="card-conteiner">
                     <div class="card-image">
-                        <img src="./img/Cards/IMAGE2.png" alt="IMAGE2">
+                        <img src="./images/img-home/Cards/IMAGE2.png" alt="IMAGE2">
                     </div>
                     <div class="card-line"></div>
                     <div class="card-title">
@@ -147,7 +138,7 @@
                     </div>
                     <div class="card-line"></div>
                     <div class="card-footer-conteiner">
-                        <img class="card-img" src="./img/Cards/IMAGEMen1.png" alt="Sunny Side Up">
+                        <img class="card-img" src="./images/img-home/Cards/IMAGEMen1.png" alt="Sunny Side Up">
                         <p class="card-name">Mat Vogels</p>
                         <p class="card-date date2">9/25/2015</p>
                     </div>
@@ -155,7 +146,7 @@
     
                 <div class="card-conteiner">
                     <div class="card-image">
-                        <img src="./img/Cards/IMAGE3.png" alt="IMAGE3">
+                        <img src="./images/img-home/Cards/IMAGE3.png" alt="IMAGE3">
                     </div>
                     <div class="card-line"></div>
                     <div class="card-title">
@@ -164,7 +155,7 @@
                     </div>
                     <div class="card-line"></div>
                     <div class="card-footer-conteiner">
-                        <img class="card-img" src="./img/Cards/IMAGEMen1.png" alt="Water Falls">
+                        <img class="card-img" src="./images/img-home/Cards/IMAGEMen1.png" alt="Water Falls">
                         <p class="card-name">Mat Vogels</p>
                         <p class="card-date date2">9/25/2015</p>
                     </div>
@@ -172,7 +163,7 @@
                 
                 <div class="card-conteiner">
                     <div class="card-image">
-                        <img src="./img/Cards/IMAGE4.png" alt="IMAGE4">
+                        <img src="./images/img-home/Cards/IMAGE4.png" alt="IMAGE4">
                     </div>
                     <div class="card-line"></div>
                     <div class="card-title">
@@ -181,7 +172,7 @@
                     </div>
                     <div class="card-line"></div>
                     <div class="card-footer-conteiner">
-                        <img class="card-img" src="./img/Cards/IMAGEMen2.png"alt="Through the Mist">
+                        <img class="card-img" src="./images/img-home/Cards/IMAGEMen2.png"alt="Through the Mist">
                         <p class="card-name">William Wong</p>
                         <p class="card-date date1">9/25/2015</p>
                     </div>
@@ -189,7 +180,7 @@
                 
                 <div class="card-conteiner">
                     <div class="card-image">
-                        <img src="./img/Cards/IMAGE5.png" alt="IMAGE5">
+                        <img src="./images/img-home/Cards/IMAGE5.png" alt="IMAGE5">
                     </div>
                     <div class="card-line"></div>
                     <div class="card-title">
@@ -198,7 +189,7 @@
                     </div>
                     <div class="card-line"></div>
                     <div class="card-footer-conteiner">
-                        <img class="card-img" src="./img/Cards/IMAGEMen1.png" alt="Awaken Early">
+                        <img class="card-img" src="./images/img-home/Cards/IMAGEMen1.png" alt="Awaken Early">
                         <p class="card-name">Mat Vogels</p>
                         <p class="card-date date2">9/25/2015</p>
                     </div>
@@ -206,7 +197,7 @@
     
                 <div class="card-conteiner">
                     <div class="card-image">
-                        <img src="./img/Cards/IMAGE6.png" alt="IMAGE6">
+                        <img src="./images/img-home/Cards/IMAGE6.png" alt="IMAGE6">
                     </div>
                     <div class="card-line"></div>
                     <div class="card-title">
@@ -215,7 +206,7 @@
                     </div>
                     <div class="card-line"></div>
                     <div class="card-footer-conteiner">
-                        <img class="card-img" src="./img/Cards/IMAGEMen1.png" alt="Try it Always">
+                        <img class="card-img" src="./images/img-home/Cards/IMAGEMen1.png" alt="Try it Always">
                         <p class="card-name">Mat Vogels</p>
                         <p class="card-date date2">9/25/2015</p>
                     </div>
@@ -227,7 +218,7 @@
         <div class="fotter-wrapper">
             <div class="footer-conteiner">
                 <div class="title-escape">
-                    <img src="./img/Escape.svg" alt="Escape.">
+                    <img src="./images/img-home/Escape.svg" alt="Escape.">
                 </div>
                 <nav class="top-list head-edit">
                     <ul class="top-list foot-edit">
