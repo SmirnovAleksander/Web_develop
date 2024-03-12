@@ -8,6 +8,8 @@ $posts = [
    'date' => 'September 25, 2015',
    'title-btn' => 'Photography',
    'class-color-btn' => 'photography',
+   'back-img' => './images/img-home/TheRoadAhead.png',
+   'href-card' => './post.php'
  ],
  [
     'title' => 'From Top Down',
@@ -17,6 +19,8 @@ $posts = [
     'date' => 'September 25, 2015',
     'title-btn'=> 'Adventure',
     'class-color-btn' => 'adventure',
+    'back-img' => '/images/img-home/FromTopDown.png',
+    'href-card' => '#'
   ],
 ];
 ?>

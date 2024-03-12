@@ -1,6 +1,6 @@
-<a href="./post.php">
+<a href="<?= $post['href-card'] ?>">
     <div class="big-card">
-        <img src="./images/img-home/TheRoadAhead.png" alt="The Road Ahead">
+        <img src="<?= $post['back-img'] ?>" alt="<?= $post['title'] ?>">
         <div class="big-card_conteiner">
             <p class="big-card__title"><?= $post['title'] ?></p>
             <p class="big-card__title__under">

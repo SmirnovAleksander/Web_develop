@@ -89,7 +89,7 @@ a {
 footer {
     height: 89px;
     width: 1440px;
-    background-image: url('./images/img_post/Footer.png');
+    background-image: url('../images/img_post/Footer.png');
 }
 
 .footer-conteiner {
