@@ -1,4 +1,4 @@
-<a href="<?= $post['href-card'] ?>">
+<a href="/post?id=<?= $post['id'] ?>">
     <div class="big-card">
         <img src="<?= $post['back-img'] ?>" alt="<?= $post['title'] ?>">
         <div class="big-card_conteiner">

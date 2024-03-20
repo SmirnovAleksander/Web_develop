@@ -1,24 +1,26 @@
 <?php
 $featured_post = [
     [
+        'id' => 1,
         'title' => 'The Road Ahead',
         'subtitle' => 'The road ahead might be paved - it might not be.',
-        'img_modifier' => './images/img-home/Cards/IMAGEMen1.png',
+        'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
         'author' => 'Mat Vogels',
-        'date' => 'September 25, 2015',
+        'date' => date("F d, Y", 1443139200),
         'title-btn' => 'Photography',
         'class-color-btn' => 'photography',
-        'back-img' => './images/img-home/TheRoadAhead.png',
+        'back-img' => 'http://localhost:8001/static/images/img-home/TheRoadAhead.png',
     ],
     [
+        'id' => 2,
         'title' => 'From Top Down',
         'subtitle' => 'Once a year, go someplace you’ve never been before.',
-        'img_modifier' => './images/img-home/Cards/IMAGEMen2.png',
+        'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen2.png',
         'author' => 'William Wong',
-        'date' => 'September 25, 2015',
+        'date' => date("F d, Y", 1443139200),
         'title-btn' => 'Adventure',
         'class-color-btn' => 'adventure',
-        'back-img' => '/images/img-home/FromTopDown.png',
+        'back-img' => 'http://localhost:8001/static/images/img-home/FromTopDown.png',
     ],
 ];
 ?>
@@ -28,50 +30,50 @@ $most_recent = [
     [
         'title' => 'Still Standing Tall',
         'subtitle' => 'Life begins at the end of your comfort zone.',
-        'img_modifier' => './images/img-home/Cards/IMAGEMen2.png',
+        'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen2.png',
         'author' => 'William Wong',
-        'date' => '9/25/2015',
-        'back-img' => './images/img-home/Cards/IMAGE1.png',
+        'date' => date("m/d/Y", 1443139200),
+        'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE1.png',
     ],
     [
         'title' => 'Sunny Side Up',
         'subtitle' => 'No place is ever as bad as they tell you it’s going to be.',
-        'img_modifier' => './images/img-home/Cards/IMAGEMen1.png',
+        'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
         'author' => 'Mat Vogels',
-        'date' => '9/25/2015',
-        'back-img' => './images/img-home/Cards/IMAGE2.png',
+        'date' => date("m/d/Y", 1443139200),
+        'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE2.png',
     ],
     [
         'title' => 'Water Falls',
         'subtitle' => 'We travel not to escape life, but for life not to escape us.',
-        'img_modifier' => './images/img-home/Cards/IMAGEMen1.png',
+        'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
         'author' => 'Mat Vogels',
-        'date' => '9/25/2015',
-        'back-img' => './images/img-home/Cards/IMAGE3.png',
+        'date' => date("m/d/Y", 1443139200),
+        'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE3.png',
     ],
     [
         'title' => 'Through the Mist',
         'subtitle' => 'Travel makes you see what a tiny place you occupy in the world.',
-        'img_modifier' => './images/img-home/Cards/IMAGEMen2.png',
+        'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen2.png',
         'author' => 'William Wong',
-        'date' => '9/25/2015',
-        'back-img' => './images/img-home/Cards/IMAGE4.png',
+        'date' => date("m/d/Y", 1443139200),
+        'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE4.png',
     ],
     [
         'title' => 'Awaken Early',
         'subtitle' => 'Not all those who wander are lost.',
-        'img_modifier' => './images/img-home/Cards/IMAGEMen1.png',
+        'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
         'author' => 'Mat Vogels',
-        'date' => '9/25/2015',
-        'back-img' => './images/img-home/Cards/IMAGE5.png',
+        'date' => date("m/d/Y", 1443139200),
+        'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE5.png',
     ],
     [
         'title' => 'Try it Always',
         'subtitle' => 'The world is a book, and those who do not travel read only one page.',
-        'img_modifier' => './images/img-home/Cards/IMAGEMen1.png',
+        'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
         'author' => 'Mat Vogels',
-        'date' => '9/25/2015',
-        'back-img' => './images/img-home/Cards/IMAGE6.png',
+        'date' => date("m/d/Y", 1443139200),
+        'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE6.png',
     ],
 ];
 ?>
@@ -82,7 +84,7 @@ $most_recent = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="http://localhost:8001/static/styles/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
@@ -94,7 +96,7 @@ $most_recent = [
         <div class="header-wrapper">
             <div class="header-conteiner">
                 <div>
-                    <img src="./images/img-home/Escape.svg" alt="Escape.">
+                    <img src="http://localhost:8001/static/images/img-home/Escape.svg" alt="Escape.">
                 </div>
                 <nav class="top-list head-edit">
                     <ul>
@@ -179,7 +181,7 @@ $most_recent = [
         <div class="fotter-wrapper">
             <div class="footer-conteiner">
                 <div class="title-escape">
-                    <img src="./images/img-home/Escape.svg" alt="Escape.">
+                    <img src="http://localhost:8001/static/images/img-home/Escape.svg" alt="Escape.">
                 </div>
                 <nav class="top-list head-edit">
                     <ul class="top-list foot-edit">
