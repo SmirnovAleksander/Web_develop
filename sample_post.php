@@ -4,7 +4,7 @@
             <p class="road-ahead-under"><?= $post['subtitle'] ?></p>
         </div>
     </div>
-    <img src="<?= $post['back-img'] ?>" alt="hi">
+    <img src="<?= $post['back-img'] ?>" alt="Background image post">
     <div class="main-text-block">
         <div class="text-block">
             <p><?= $post['text'] ?></p>

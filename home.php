@@ -6,7 +6,7 @@ $featured_post = [
         'subtitle' => 'The road ahead might be paved - it might not be.',
         'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
         'author' => 'Mat Vogels',
-        'date' => date("F d, Y", 1443139200),
+        'date' => date("F d, Y", 1443139200),//использовать time stamp
         'title-btn' => 'Photography',
         'class-color-btn' => 'photography',
         'back-img' => 'http://localhost:8001/static/images/img-home/TheRoadAhead.png',
@@ -88,7 +88,7 @@ $most_recent = [
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
-    <title>Lab_2</title>
+    <title>Lab_4</title>
 </head>
 
 <body>
