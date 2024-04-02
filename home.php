@@ -26,8 +26,9 @@ $featured_post = [
 ?>
 
 <?php
-$most_recent = [
+$most_recent_post = [
     [
+        'id' => 1,
         'title' => 'Still Standing Tall',
         'subtitle' => 'Life begins at the end of your comfort zone.',
         'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen2.png',
@@ -36,6 +37,7 @@ $most_recent = [
         'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE1.png',
     ],
     [
+        'id' => 2,
         'title' => 'Sunny Side Up',
         'subtitle' => 'No place is ever as bad as they tell you it’s going to be.',
         'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
@@ -44,6 +46,7 @@ $most_recent = [
         'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE2.png',
     ],
     [
+        'id' => 3,
         'title' => 'Water Falls',
         'subtitle' => 'We travel not to escape life, but for life not to escape us.',
         'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
@@ -52,6 +55,7 @@ $most_recent = [
         'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE3.png',
     ],
     [
+        'id' => 4,
         'title' => 'Through the Mist',
         'subtitle' => 'Travel makes you see what a tiny place you occupy in the world.',
         'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen2.png',
@@ -60,6 +64,7 @@ $most_recent = [
         'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE4.png',
     ],
     [
+        'id' => 5,
         'title' => 'Awaken Early',
         'subtitle' => 'Not all those who wander are lost.',
         'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
@@ -68,6 +73,7 @@ $most_recent = [
         'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE5.png',
     ],
     [
+        'id' => 6,
         'title' => 'Try it Always',
         'subtitle' => 'The world is a book, and those who do not travel read only one page.',
         'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
@@ -170,8 +176,8 @@ $most_recent = [
             </div>
             <nav class="most-recent_cards">
                 <?php
-                foreach ($most_recent as $post) {
-                    include 'most_recent.php';
+                foreach ($most_recent_post as $post) {
+                    include 'most_recent_post.php';
                 }
                 ?>
             </nav>
