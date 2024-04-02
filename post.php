@@ -20,8 +20,7 @@ $sample_post = [
     masterful and incommunicable wisdom of eternity laughing at the 
     futility of life and the effort of life. It was the Wild, the savage, 
     frozen-hearted Northland Wild. 
-    <br/>
-    <br/>
+    <br/><br/>
     But there was life, abroad in the land and defiant. Down the frozen 
     waterway toiled a string of wolfish dogs. Their bristly fur was 
     rimed with frost. Their breath froze in the air as it left their 
