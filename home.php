@@ -1,87 +1,92 @@
-<?php
-$featured_post = [
-    [
-        'id' => 1,
-        'title' => 'The Road Ahead',
-        'subtitle' => 'The road ahead might be paved - it might not be.',
-        'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
-        'author' => 'Mat Vogels',
-        'date' => date("F d, Y", 1443139200),//использовать time stamp
-        'title-btn' => 'Photography',
-        'class-color-btn' => 'photography',
-        'back-img' => 'http://localhost:8001/static/images/img-home/TheRoadAhead.png',
-    ],
-    [
-        'id' => 2,
-        'title' => 'From Top Down',
-        'subtitle' => 'Once a year, go someplace you’ve never been before.',
-        'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen2.png',
-        'author' => 'William Wong',
-        'date' => date("F d, Y", 1443139200),
-        'title-btn' => 'Adventure',
-        'class-color-btn' => 'adventure',
-        'back-img' => 'http://localhost:8001/static/images/img-home/FromTopDown.png',
-    ],
-];
-?>
+<!-- 
+// $featured_post = [
+//     [
+//         'id' => 1,
+//         'title' => 'The Road Ahead',
+//         'subtitle' => 'The road ahead might be paved - it might not be.',
+//         'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
+//         'author' => 'Mat Vogels',
+//         'date' => date("F d, Y", 1443139200),//использовать time stamp
+//         'title-btn' => 'Photography',
+//         'class-color-btn' => 'photography',
+//         'back-img' => 'http://localhost:8001/static/images/img-home/TheRoadAhead.png',
+//     ],
+//     [
+//         'id' => 2,
+//         'title' => 'From Top Down',
+//         'subtitle' => 'Once a year, go someplace you’ve never been before.',
+//         'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen2.png',
+//         'author' => 'William Wong',
+//         'date' => date("F d, Y", 1443139200),
+//         'title-btn' => 'Adventure',
+//         'class-color-btn' => 'adventure',
+//         'back-img' => 'http://localhost:8001/static/images/img-home/FromTopDown.png',
+//     ],
+// ];
+//
 
+//
+// $most_recent_post = [
+//     [
+//         'id' => 1,
+//         'title' => 'Still Standing Tall',
+//         'subtitle' => 'Life begins at the end of your comfort zone.',
+//         'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen2.png',
+//         'author' => 'William Wong',
+//         'date' => date("m/d/Y", 1443139200),
+//         'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE1.png',
+//     ],
+//     [
+//         'id' => 2,
+//         'title' => 'Sunny Side Up',
+//         'subtitle' => 'No place is ever as bad as they tell you it’s going to be.',
+//         'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
+//         'author' => 'Mat Vogels',
+//         'date' => date("m/d/Y", 1443139200),
+//         'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE2.png',
+//     ],
+//     [
+//         'id' => 3,
+//         'title' => 'Water Falls',
+//         'subtitle' => 'We travel not to escape life, but for life not to escape us.',
+//         'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
+//         'author' => 'Mat Vogels',
+//         'date' => date("m/d/Y", 1443139200),
+//         'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE3.png',
+//     ],
+//     [
+//         'id' => 4,
+//         'title' => 'Through the Mist',
+//         'subtitle' => 'Travel makes you see what a tiny place you occupy in the world.',
+//         'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen2.png',
+//         'author' => 'William Wong',
+//         'date' => date("m/d/Y", 1443139200),
+//         'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE4.png',
+//     ],
+//     [
+//         'id' => 5,
+//         'title' => 'Awaken Early',
+//         'subtitle' => 'Not all those who wander are lost.',
+//         'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
+//         'author' => 'Mat Vogels',
+//         'date' => date("m/d/Y", 1443139200),
+//         'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE5.png',
+//     ],
+//     [
+//         'id' => 6,
+//         'title' => 'Try it Always',
+//         'subtitle' => 'The world is a book, and those who do not travel read only one page.',
+//         'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
+//         'author' => 'Mat Vogels',
+//         'date' => date("m/d/Y", 1443139200),
+//         'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE6.png',
+//     ],
+// ]; -->
 <?php
-$most_recent_post = [
-    [
-        'id' => 1,
-        'title' => 'Still Standing Tall',
-        'subtitle' => 'Life begins at the end of your comfort zone.',
-        'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen2.png',
-        'author' => 'William Wong',
-        'date' => date("m/d/Y", 1443139200),
-        'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE1.png',
-    ],
-    [
-        'id' => 2,
-        'title' => 'Sunny Side Up',
-        'subtitle' => 'No place is ever as bad as they tell you it’s going to be.',
-        'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
-        'author' => 'Mat Vogels',
-        'date' => date("m/d/Y", 1443139200),
-        'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE2.png',
-    ],
-    [
-        'id' => 3,
-        'title' => 'Water Falls',
-        'subtitle' => 'We travel not to escape life, but for life not to escape us.',
-        'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
-        'author' => 'Mat Vogels',
-        'date' => date("m/d/Y", 1443139200),
-        'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE3.png',
-    ],
-    [
-        'id' => 4,
-        'title' => 'Through the Mist',
-        'subtitle' => 'Travel makes you see what a tiny place you occupy in the world.',
-        'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen2.png',
-        'author' => 'William Wong',
-        'date' => date("m/d/Y", 1443139200),
-        'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE4.png',
-    ],
-    [
-        'id' => 5,
-        'title' => 'Awaken Early',
-        'subtitle' => 'Not all those who wander are lost.',
-        'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
-        'author' => 'Mat Vogels',
-        'date' => date("m/d/Y", 1443139200),
-        'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE5.png',
-    ],
-    [
-        'id' => 6,
-        'title' => 'Try it Always',
-        'subtitle' => 'The world is a book, and those who do not travel read only one page.',
-        'img_modifier' => 'http://localhost:8001/static/images/img-home/Cards/IMAGEMen1.png',
-        'author' => 'Mat Vogels',
-        'date' => date("m/d/Y", 1443139200),
-        'back-img' => 'http://localhost:8001/static/images/img-home/Cards/IMAGE6.png',
-    ],
-];
+  require_once('./dbconnect.php');
+  $dbConnection = createDBConnection();
+  $featured_post = getPostsFromDB($dbConnection, 1);
+  $most_recent_post = getPostsFromDB($dbConnection, 0);
 ?>
 
 <!DOCTYPE html>
