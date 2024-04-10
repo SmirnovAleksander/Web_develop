@@ -7,7 +7,7 @@ CREATE TABLE `post` (
 	`author_url` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
 	`publish_date` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
 	`image_url` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
-	`featured` TINYINT(3) NOT NULL DEFAULT '0',
+	`featured` TINYINT NOT NULL DEFAULT '0',
 	PRIMARY KEY (`id`) USING BTREE
 )
 COLLATE='utf8mb4_0900_ai_ci'

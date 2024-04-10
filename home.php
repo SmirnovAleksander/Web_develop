@@ -3,8 +3,9 @@
   const USERNAME = 'root';
   const PASSWORD = '';
   const DATABASE = 'blog';
+  const PORT = '3306';
   function createDBConnection(): mysqli {
-    $conn = new mysqli(HOST, USERNAME, PASSWORD, DATABASE);
+    $conn = new mysqli(HOST, USERNAME, PASSWORD, DATABASE, PORT);
     if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
     }
@@ -14,13 +15,17 @@
   function closeDBConnection(mysqli $conn): void {
     $conn->close();
   }
-  
   $conn = createDBConnection();
+  try {
     $sql = "SELECT * FROM post";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       $posts = $result->fetch_all(MYSQLI_ASSOC);
     }
+  }
+  catch(Exception $errror) {
+    echo $errror->getMessage();
+  }
   closeDBConnection($conn)
 ?>
 

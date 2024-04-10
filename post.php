@@ -4,7 +4,7 @@ foreach ($_GET as $key => $value) {
 $sample_post = [
     [
         'id' => 1,
-        'title' => "The Road Ahead",
+        'title' => $value,
         'subtitle' => 'The road ahead might be paved - it might not be.',
         'back-img' => './images/img_post/MainBack.png',
         'text' => 'Dark spruce forest frowned on either side the frozen waterway. 

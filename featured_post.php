@@ -7,15 +7,15 @@
                 <?= $post['subtitle'] ?>
             </p>
             <div class="big-card__footer__conteiner">
-                <img class="big-card-img" src=<?= $post['author_url'] ?> alt="Men1">
+                <img class="big-card-img" src=<?= $post['author_url'] ?> alt="<?= $post['author'] ?>">
                 <div class="big-card-footer_block">
                     <p class="big-card-name"><?= $post['author'] ?></p>
-                    <p class="big-card-date"><?= $post['publish_date'] ?></p>
+                    <p class="big-card-date"><?= date("F d, Y", $post['publish_date']) ?></p>
                 </div>
             </div>
         </div>
-        <p class="big-card-button <?= $post['class-color-btn'] ?>">
-            <?= $post['title-btn'] ?>
-        </p>
+        <!-- <p class="big-card-button">
+            adventure
+        </p> -->
     </div>
 </a>
