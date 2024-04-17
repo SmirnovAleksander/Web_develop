@@ -4,7 +4,8 @@ foreach ($_GET as $key => $value) {
 $sample_post = [
     [
         'id' => 1,
-        'title' => $value,
+        'title' => 'The road ahead',
+        // $value
         'subtitle' => 'The road ahead might be paved - it might not be.',
         'back-img' => './images/img_post/MainBack.png',
         'text' => 'Dark spruce forest frowned on either side the frozen waterway. 
@@ -82,15 +83,23 @@ $sample_post = [
 <body>
     <header>
         <div class="header-conteiner">
-            <div class="title-escape">
-                <img src="http://localhost:8001/static/images/img_post/Escape.svg">
+            <div>
+                <img src="http://localhost:8001/static/images/img_post/Escape.svg" alt="Escape.">
             </div>
-            <nav class="header-nav">
-                <ul class="header-list">
-                    <li class="nav-title"><a href="#!">Home</a></li>
-                    <li class="nav-title"><a href="#!">Categories</a></li>
-                    <li class="nav-title"><a href="#!">About</a></li>
-                    <li class="nav-title"><a href="#!">Contact</a></li>
+            <nav class="top-list head-edit">
+                <ul>
+                    <li>
+                        <a href="#!">Home</a>
+                    </li>
+                    <li>
+                        <a href="#!">Categories</a>
+                    </li>
+                    <li>
+                        <a href="#!">About</a>
+                    </li>
+                    <li>
+                        <a href="#!">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -101,18 +110,41 @@ $sample_post = [
     }
     ?>
     <footer>
-        <div class="footer-conteiner">
-            <div class="title-escape">
-                <img src="http://localhost:8001/static/images/img_post/Escape.svg">
+        <div class="fotter-wrapper">
+            <div class="log-title">
+                <p>Stay in Touch</p>
+                <hr class="line">
             </div>
-            <nav class="header-nav">
-                <ul class="header-list">
-                    <li class="nav-title-footer"><a href="#!">Home</a></li>
-                    <li class="nav-title-footer"><a href="#!">Categories</a></li>
-                    <li class="nav-title-footer"><a href="#!">About</a></li>
-                    <li class="nav-title-footer"><a href="#!">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="log-input-conteiner">
+                <div class="input-block">
+
+                </div>
+                <div class="submit-button">
+                    <p>Submit</p>
+                </div>
+            </div>
+            <div class="footer-blure"></div>
+            <div class="footer-conteiner">
+                <div class="title-escape">
+                    <img src="http://localhost:8001/static/images/img_post/Escape_white.svg" alt="Escape.">
+                </div>
+                <nav class="top-list foot-edit">
+                    <ul class="top-list">
+                        <li>
+                            <a href="#!">Home</a>
+                        </li>
+                        <li>
+                            <a href="#!">Categories</a>
+                        </li>
+                        <li>
+                            <a href="#!">About</a>
+                        </li>
+                        <li>
+                            <a href="#!">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </footer>
 </body>

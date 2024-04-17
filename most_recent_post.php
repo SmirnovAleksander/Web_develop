@@ -1,18 +1,20 @@
 <a>
     <div class="card-conteiner">
         <div class="card-image">
-            <img src="<?= $post['image_url'] ?>" alt="IMAGE">
+            <img src="<?= $row['image_url'] ?>" alt="IMAGE">
         </div>
         <div class="card-line"></div>
         <div class="card-title">
-            <p class="card-title__name"><?= $post['title'] ?></p>
-            <p class="card-title__description"> <?= $post['subtitle'] ?></p>
+            <p class="card-title__name"><?= $row['title'] ?></p>
+            <p class="card-title__description"> <?= $row['subtitle'] ?></p>
         </div>
         <div class="card-line"></div>
         <div class="card-footer-conteiner">
-            <img class="card-img" src="<?= $post['author_url'] ?>" alt="<?= $post['author'] ?>">
-            <p class="card-name"><?= $post['author'] ?></p>
-            <p class="card-date date1"><?= date("m/d/Y", $post['publish_date']) ?></p>
+            <img class="card-img" src="<?= $row['author_url'] ?>" alt="<?= $row['author'] ?>">
+            <div class='card-footer-block'>
+                <p class="card-name"><?= $row['author'] ?></p>
+                <p class="card-date"><?= date("m/d/Y", $row['publish_date']) ?></p>
+            </div>
         </div>
     </div>
 </a>
