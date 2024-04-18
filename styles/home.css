@@ -13,7 +13,7 @@ body {
 }
 
 .header-wrapper {
-    background-image: url(http://localhost:8001/static/images/img-home/MainBack.png);
+    background-image: url(http://localhost:8001/static/images/img_home/MainBack.png);
     background-size: 100% 100%;
     max-width: 100%;
     display: flex;
@@ -132,7 +132,7 @@ a {
 /* Footer */
 
 .fotter-wrapper {
-    background: url(http://localhost:8001/static/images/img-home/FooterBack.png);
+    background: url(http://localhost:8001/static/images/img_home/FooterBack.png);
     background-size: 100% 100%;
     max-width: 100%;
     height: 378px;

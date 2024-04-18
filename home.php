@@ -75,7 +75,7 @@ function getAndPrintPostsFromDB2(mysqli $conn): void
         <div class="header-wrapper">
             <div class="header-conteiner">
                 <div>
-                    <img src="http://localhost:8001/static/images/img-home/Escape.svg" alt="Escape.">
+                    <img src="http://localhost:8001/static/images/img_home/Escape.svg" alt="Escape.">
                 </div>
                 <nav class="top-list head-edit">
                     <ul>
@@ -172,7 +172,7 @@ function getAndPrintPostsFromDB2(mysqli $conn): void
             <div class="footer-blure"></div>
             <div class="footer-conteiner">
                 <div class="title-escape">
-                    <img src="http://localhost:8001/static/images/img-home/Escape.svg" alt="Escape.">
+                    <img src="http://localhost:8001/static/images/img_home/Escape.svg" alt="Escape.">
                 </div>
                 <nav class="top-list foot-edit">
                     <ul class="top-list">

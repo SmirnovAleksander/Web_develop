@@ -57,8 +57,8 @@ function getPostJson(): ?string {
     $imageBase64Array = explode(';base64,', $imageBase64);
     $imgExtention = str_replace('data:image/', '', $imageBase64Array[0]);
     $imageDecoded = base64_decode($imageBase64Array[1]);
-    saveFile("images/img-home/$name.{$imgExtention}", $imageDecoded);
-    return "images/img-home/$name.{$imgExtention}";
+    saveFile("images/img_home/$name.{$imgExtention}", $imageDecoded);
+    return "images/img_home/$name.{$imgExtention}";
   }
 
   $dataAsJson = getPostJson();

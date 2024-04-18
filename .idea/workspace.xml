@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a56a237-cd8f-4701-b33b-8afc4abae405" name="Changes" comment="" />
+    <list default="true" id="7a56a237-cd8f-4701-b33b-8afc4abae405" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/sql/posts/posts1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data/sql/posts/posts1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/img-home/Cards/IMAGE1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_home/Cards/IMAGE1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/img-home/Cards/IMAGE2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_home/Cards/IMAGE2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/img-home/Cards/IMAGE3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_home/Cards/IMAGE3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/img-home/Cards/IMAGE4.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_home/Cards/IMAGE4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/img-home/Cards/IMAGE5.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_home/Cards/IMAGE5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/img-home/Cards/IMAGE6.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_home/Cards/IMAGE6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/img-home/Cards/IMAGEMen1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_home/Cards/IMAGEMen1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/img-home/Cards/IMAGEMen2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_home/Cards/IMAGEMen2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/img-home/Escape.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_home/Escape.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/img-home/FooterBack.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_home/FooterBack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/img-home/FromTopDown.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_home/FromTopDown.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/img-home/John Flae.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_home/John Flae.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/img-home/MainBack.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_home/MainBack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/img-home/The road ahead.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_home/The road ahead.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/img-home/TheRoadAhead.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_home/TheRoadAhead.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/img-home/vova bul bu.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_home/vova bul bu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/img-home/vova lubit kushat.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_home/vova lubit kushat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/home.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +39,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2dfQYyyMwHtejDoD0CZy8BRlsMR" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -25,19 +51,16 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "saveSpot",
     "last_opened_file_path": "D:/Web_develop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14808.18" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -47,6 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710396705502</updated>
       <workItem from="1710396706976" duration="48000" />
+      <workItem from="1713457446393" duration="347000" />
     </task>
     <servers />
   </component>
