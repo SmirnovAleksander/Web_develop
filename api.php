@@ -64,7 +64,7 @@ function getPostJson(): ?string {
   $dataAsJson = getPostJson();
   
   if ($method != 'POST'){
-    echo "Используйте POST!!!!!!!!!!!!!!!!!!";
+    echo "Вы не использовали Post";
     return;
   }
    

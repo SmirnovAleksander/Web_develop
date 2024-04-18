@@ -1,6 +1,6 @@
 <a href="/post?id=<?= $row['id'] ?>">
     <div class="big-card">
-        <img src="<?= $row['image_url'] ?>" alt="<?= $row['title'] ?> ">
+        <img src="<?= $row['image_url'] ?>" alt="<?= $row['title'] ?>" class="image-block">
         <div class="big-card_conteiner">
             <p class="big-card__title"><?= $row['title'] ?></p>
             <p class="big-card__title__under">

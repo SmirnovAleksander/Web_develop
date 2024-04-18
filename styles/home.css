@@ -58,8 +58,6 @@ body {
     margin-right: 20px;
 }
 
-
-
 a {
     color: #FFFFFF;
     text-decoration: none;
@@ -283,6 +281,15 @@ a {
 /* Big Card */
 .big-card{
     position: relative;
+    width: 460px;
+    height: 280px;
+}
+
+.image-block {
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+    height: 100%;
 }
 
 .big-card_conteiner {
@@ -290,8 +297,9 @@ a {
     height: 181px;
     position: absolute;
     top: 99px;
-    left: 0;
 }
+
+
 
 .big-card__title {
     font-family: Lora;
@@ -319,6 +327,7 @@ a {
     left: 20px;
     display: flex;
 }
+
 
 /* Big Card under */
 
@@ -391,6 +400,8 @@ a {
 
 .card-image {
     line-height: 0;
+    width: 296px;
+    height: 150px;
 }
 
 /* Card header */
