@@ -43,16 +43,7 @@ function getAndPrintPostsFromDB2(mysqli $conn): void
         echo "0 results";
     }
 }
-// $conn = createDBConnection();
-// try {
-//     $result = $conn->query($sql);
-//     if ($result->num_rows > 0) {
-//         $posts = $result->fetch_all(MYSQLI_ASSOC);
-//     }
-// } catch (Exception $errror) {
-//     echo $errror->getMessage();
-// }
-// closeDBConnection($conn)
+
 ?>
 
 
