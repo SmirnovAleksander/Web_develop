@@ -237,6 +237,7 @@ a {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
+    max-width: 960px;
 }
 /* Title Future posts and Most Recent */
 .feature-posts__conteiner1__title {
