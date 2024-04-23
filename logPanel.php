@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/logPanel.css">
     <link rel="preconnect" href="http://fonts.googleapis.com">
     <link rel="preconnect" href="http://fonts.gstatic.com" crossorigin>
     <link href="http://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./log.css">
     <title>Document</title>
 </head>
 
@@ -29,7 +29,7 @@
                         <p>Password</p>
                     </div>
                     <div class="input-block">
-                        <img src="./img/icon-eye.svg" alt="icon-eye" class="icon-eye" />
+                        <img src="./images/img_log/icon-eye.svg" alt="icon-eye" class="icon-eye" />
                     </div>
                 </div>
                 <button class="log-in-button">
@@ -41,7 +41,7 @@
         <div class="header-conteiner">
             <div class="title-conteiner">
                 <div class="title-text">
-                    <img src="./img/EscapeAuthor.svg" alt="Escape" />
+                    <img src="./images/img_log/EscapeAuthor.svg" alt="Escape" />
                 </div>
             </div>
             <div class="subtitle-conteiner">

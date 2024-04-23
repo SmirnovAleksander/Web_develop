@@ -20,7 +20,7 @@ body {
 
 
 .main-back {
-    background-image: url(./img/field.png);
+    background-image: url(../images/img_log/field.png);
     background-size: cover;
     background-position: center;
     height: 100vh;

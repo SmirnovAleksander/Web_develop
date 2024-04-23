@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./admin.css">
+    <link rel="stylesheet" href="./styles/adminPanel.css">
     <link rel="preconnect" href="http://fonts.googleapis.com">
     <link rel="preconnect" href="http://fonts.gstatic.com" crossorigin>
     <link
@@ -17,14 +17,14 @@
     <header>
         <div class="header-conteiner">
             <div>
-                <img src="./img/EscapeAuthor.svg" alt="EscapeAuthor" />
+                <img src="./images/img_admin/EscapeAuthor.svg" alt="EscapeAuthor" />
             </div>
             <div class="header-menu">
                 <div class="admin-avatar">
                     <span class="admin-avatar-symb">N</span>
                 </div>
                 <div class="admin-menu-exit">
-                    <img src="./img/exitIcon.svg" alt="exitIcon" class="exit-icon" />
+                    <img src="./images/img_admin/exitIcon.svg" alt="exitIcon" class="exit-icon" />
                 </div>
             </div>
         </div>
@@ -90,7 +90,7 @@
                                 </div>
                                 <div class="input-upload">
                                     <div class="input-upload_icon">
-                                        <img src="./img/InputUploadIcon.svg" alt="InputUploadIcon"
+                                        <img src="./images/img_admin/InputUploadIcon.svg" alt="InputUploadIcon"
                                             class="input-icon1" />
                                     </div>
                                     <div class="input-upload-button_text">
@@ -107,7 +107,7 @@
                                     <div class="field_text">
                                         <p>4/18/2024</p>
                                     </div>
-                                    <img src="./img/calendarIcon.png" alt="calendarIcon" class="calendar-icon" />
+                                    <img src="./images/img_admin/calendarIcon.png" alt="calendarIcon" class="calendar-icon" />
                                 </div>
                             </div>
 
@@ -118,7 +118,7 @@
                                 <div class="input-image-upload">
                                     <div class="input-image_icon">
                                         <button class="input-image_button">
-                                            <img src="./img/InputUploadIcon.svg" alt="InputUploadIcon"
+                                            <img src="./images/img_admin/InputUploadIcon.svg" alt="InputUploadIcon"
                                                 class="input-icon1" />
                                             <div class="input-upload-button_text">
                                                 <p>Upload</p>
@@ -139,7 +139,7 @@
                                 <div class="input-image-small-upload">
                                     <div class="input-image-small_icon">
                                         <button class="input-image-small_button">
-                                            <img src="./img/InputUploadIcon.svg" alt="InputUploadIcon"
+                                            <img src="./images/img_admin/InputUploadIcon.svg" alt="InputUploadIcon"
                                                 class="input-icon1" />
                                             <div class="input-upload-button_text">
                                                 <p>Upload</p>
@@ -165,9 +165,9 @@
                                 <div class="page-preview-wrapper">
                                     <div class="page-preview">
                                         <div class="admin-dots">
-                                            <img src="./img/dot.png" alt="." class="admin-dot1" />
-                                            <img src="./img/dot.png" alt="." class="admin-dot2" />
-                                            <img src="./img/dot.png" alt="." class="admin-dot3" />
+                                            <img src="./images/img_admin/dot.png" alt="." class="admin-dot1" />
+                                            <img src="./images/img_admin/dot.png" alt="." class="admin-dot2" />
+                                            <img src="./images/img_admin/dot.png" alt="." class="admin-dot3" />
                                         </div>
 
                                     </div>
