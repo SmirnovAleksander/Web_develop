@@ -23,7 +23,7 @@ function closeDBConnection(mysqli $conn): void {
 function getPostJson(): ?string {
     $dataAsJson = file_get_contents("php://input");
     if (!$dataAsJson) {
-      echo 'Не удалось считать данные! <br>';
+      echo 'Не удалось считать данные!';
       return null;
     }
     return $dataAsJson;
@@ -32,7 +32,7 @@ function getPostJson(): ?string {
   function getPostJsonAsArray(string $dataAsJson): array {
     $dataAsArray = json_decode($dataAsJson, true);
     if (!$dataAsArray) {
-      echo 'Не удалось преобразовать JSON в массив! <br>';
+      echo 'Не удалось преобразовать JSON в массив!';
       return [];
     }
     return $dataAsArray;
@@ -43,13 +43,13 @@ function getPostJson(): ?string {
   if ($myFile) {
     $result = fwrite($myFile, $data);
     if ($result) {
-      echo 'Данные успешно сохранены в файл <br>';
+      echo 'Данные успешно сохранены в файл';
     } else {
-      echo 'Произошла ошибка при сохранении данных в файл <br>';
+      echo 'Произошла ошибка при сохранении данных в файл';
     }
     fclose($myFile);
   } else {
-    echo 'Произошла ошибка при открытии файла <br>';
+    echo 'Произошла ошибка при открытии файла';
   }
   }
 

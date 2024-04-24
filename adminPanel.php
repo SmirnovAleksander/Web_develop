@@ -100,15 +100,6 @@
                                 <div class="input-title_text">
                                     <p>Publish Date</p>
                                 </div>
-                                <!-- <div class="input_field">
-                                    <div class="field_text">
-                                        
-                                    </div>
-                                    <div class="calendar">
-                                        <img src="./images/img_admin/calendarIcon.png" alt="calendarIcon" class="calendar-icon" />
-                                    </div>   
-                                    
-                                </div> -->
                                 <input type="date" class="input_field" value="" id="datep">
                             </div>
 

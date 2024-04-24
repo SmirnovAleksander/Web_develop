@@ -1,12 +1,12 @@
 <div class="body-wrapper">
     <div class="body-conteiner">
         <div class="title-conteiner">
-            <p class="title-text"><?= $post['title'] ?></p>
-            <p class="subtitle-text"><?= $post['subtitle'] ?></p>
+            <p class="title-text"><?= $row['title'] ?></p>
+            <p class="subtitle-text"><?= $row['subtitle'] ?></p>
         </div>
-        <img src="<?= $post['back-img'] ?>" alt="Background image post">
+        <img src="<?= $row['image_url'] ?>" alt="<?= $row['title'] ?>">
         <div class="text-block">
-            <p><?= $post['text'] ?></p>
+            <p><?= $row['content'] ?></p>
         </div>
     </div>
 </div>
