@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="./styles/adminPanel.css">
     <link rel="preconnect" href="http://fonts.googleapis.com">
     <link rel="preconnect" href="http://fonts.gstatic.com" crossorigin>
-    <link
-        href="http://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Oxygen:wght@300;400;700&display=swap"
-        rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Document</title>
+    <script src="./js/adminPanel.js" defer></script>
 </head>
 
 <body>
@@ -60,9 +59,7 @@
                                     <p>Title</p>
                                 </div>
                                 <div class="input_field">
-                                    <div class="field_text">
-                                        <p>New Post</p>
-                                    </div>
+                                    <input class="field_text" id="title">
                                 </div>
                             </div>
 
@@ -71,9 +68,7 @@
                                     <p>Short description</p>
                                 </div>
                                 <div class="input_field">
-                                    <div class="field_text">
-                                        <p>Please, enter any description</p>
-                                    </div>
+                                    <input class="field_text" id="descriptor">
                                 </div>
                             </div>
 
@@ -81,7 +76,10 @@
                                 <div class="input-title_text">
                                     <p>Author name</p>
                                 </div>
-                                <div class="input-field2"></div>
+                                <div class="input-field2">
+                                    <input class="field_text" id="authName">
+                                </div>
+                                <p></p>
                             </div>
 
                             <div class="input-upload-conteiner">
@@ -89,10 +87,9 @@
                                     <p>Author Photo </p>
                                 </div>
                                 <div class="input-upload">
-                                    <div class="input-upload_icon">
-                                        <img src="./images/img_admin/InputUploadIcon.svg" alt="InputUploadIcon"
-                                            class="input-icon1" />
-                                    </div>
+                                    <button class="input-upload_icon" id="InputAuthorImg">
+                                        <img src="./images/img_admin/InputUploadIcon.svg" alt="InputUploadIcon" class="input-icon1" />
+                                    </button>
                                     <div class="input-upload-button_text">
                                         <p>Upload</p>
                                     </div>
@@ -103,12 +100,16 @@
                                 <div class="input-title_text">
                                     <p>Publish Date</p>
                                 </div>
-                                <div class="input_field">
+                                <!-- <div class="input_field">
                                     <div class="field_text">
-                                        <p>4/18/2024</p>
+                                        
                                     </div>
-                                    <img src="./images/img_admin/calendarIcon.png" alt="calendarIcon" class="calendar-icon" />
-                                </div>
+                                    <div class="calendar">
+                                        <img src="./images/img_admin/calendarIcon.png" alt="calendarIcon" class="calendar-icon" />
+                                    </div>   
+                                    
+                                </div> -->
+                                <input type="date" class="input_field" value="" id="datep">
                             </div>
 
                             <div class="input-image">
@@ -116,15 +117,14 @@
                                     <p>Hero Image </p>
                                 </div>
                                 <div class="input-image-upload">
-                                    <div class="input-image_icon">
-                                        <button class="input-image_button">
-                                            <img src="./images/img_admin/InputUploadIcon.svg" alt="InputUploadIcon"
-                                                class="input-icon1" />
+                                    <button class="input-image_icon">
+                                        <div class="input-image_button">
+                                            <img src="./images/img_admin/InputUploadIcon.svg" alt="InputUploadIcon" class="input-icon1" />
                                             <div class="input-upload-button_text">
                                                 <p>Upload</p>
                                             </div>
-                                        </button>
-                                    </div>
+                                        </div>
+                                    </button>
                                     <div class="input-image-config">
                                         <div class="input-title_text">
                                             <p>Size up to 10mb. Format: png, jpeg, gif.</p>
@@ -132,6 +132,8 @@
                                     </div>
                                 </div>
                             </div>
+                            
+
                             <div class="input-image-small">
                                 <div class="input-title_text">
                                     <p>Hero Image</p>
@@ -139,8 +141,7 @@
                                 <div class="input-image-small-upload">
                                     <div class="input-image-small_icon">
                                         <button class="input-image-small_button">
-                                            <img src="./images/img_admin/InputUploadIcon.svg" alt="InputUploadIcon"
-                                                class="input-icon1" />
+                                            <img src="./images/img_admin/InputUploadIcon.svg" alt="InputUploadIcon" class="input-icon1" />
                                             <div class="input-upload-button_text">
                                                 <p>Upload</p>
                                             </div>
@@ -202,7 +203,7 @@
                             <div class="input-block_text">
                                 <p>Type anything you want ...</p>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>

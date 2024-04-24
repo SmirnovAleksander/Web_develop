@@ -6,10 +6,18 @@
     text-decoration: none;
 }
 
+:active,
+:hover,
+:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
 p {
     margin: 0;
     padding: 0;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -75,6 +83,7 @@ header {
     width: 24px;
     height: 24px;
 }
+
 /*  */
 
 .newpost-wrapper {
@@ -220,6 +229,7 @@ header {
     position: absolute;
     text-align: left;
     line-height: 24px;
+    border: none;
 }
 
 .input-author-name {
@@ -275,14 +285,15 @@ header {
     border-width: 1px;
     border-radius: 100%;
     justify-content: center;
+    overflow: hidden;
     background-color: rgba(247, 247, 247, 1);
 }
 
 .input-icon1 {
-    width: 24px;
-    height: 24px;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
 }
-
 .input-upload-button_text {
     color: rgba(46, 46, 46, 1);
     height: auto;
@@ -409,6 +420,7 @@ header {
     justify-content: center;
     background-color: rgba(247, 247, 247, 1);
 }
+
 /*  */
 
 .admin-form2 {
@@ -539,6 +551,7 @@ header {
     border-style: solid;
     border-width: 1px;
 }
+
 /*  */
 
 .admin-content {
@@ -625,4 +638,5 @@ header {
     width: 8px;
     height: 8px;
 }
+
 /*  */
