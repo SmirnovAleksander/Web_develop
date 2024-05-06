@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Загрузка изображения</title>
+<style>
+.input-upload_icon {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-color: rgba(211, 211, 211, 1);
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 100%;
+    background-color: rgba(247, 247, 247, 1);
+    cursor: pointer;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.input-icon1 {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#deleteButton, #changeButton {
+    display: none;
+}
+</style>
+</head>
+<body>
+
+<input type="file" id="fileInput" style="display: none;">
+<button class="input-upload_icon" id="InputAuthorImg">
+    <img src="./images/img_admin/InputUploadIcon.svg" alt="InputUploadIcon" class="input-icon1" />
+</button>
+
+<button id="deleteButton">Удалить</button>
+<button id="changeButton">Загрузить новую</button>
+
+<script>
+var InputAuthorImg = document.getElementById("InputAuthorImg");
+var deleteButton = document.getElementById("deleteButton");
+var changeButton = document.getElementById("changeButton");
+
+InputAuthorImg.addEventListener('click', function() {
+    document.getElementById('fileInput').click();
+});
+
+document.getElementById('fileInput').addEventListener('change', function(event) {
+    var file = event.target.files[0];
+    var reader = new FileReader();
+
+    reader.onload = function() {
+        var imageData = reader.result;
+        var rectangle = InputAuthorImg;
+        rectangle.style.backgroundImage = 'url(' + imageData + ')';
+        // Удаление тега <img> из кнопки
+        rectangle.innerHTML = '';
+
+        // Отображение кнопок удаления и загрузки новой картинки
+        deleteButton.style.display = 'inline';
+        changeButton.style.display = 'inline';
+    };
+
+    reader.readAsDataURL(file);
+});
+
+deleteButton.addEventListener('click', function() {
+    // Удаление фонового изображения
+    InputAuthorImg.style.backgroundImage = '';
+    // Показать тег <img> снова
+    InputAuthorImg.innerHTML = '<img src="./images/img_admin/InputUploadIcon.svg" alt="InputUploadIcon" class="input-icon1" />';
+    // Скрыть кнопки
+    deleteButton.style.display = 'none';
+    changeButton.style.display = 'none';
+});
+
+changeButton.addEventListener('click', function() {
+    // Сбросить значение файла
+    document.getElementById('fileInput').value = '';
+    // Триггер клика на input file
+    document.getElementById('fileInput').click();
+});
+</script>
+
+</body>
+</html>

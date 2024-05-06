@@ -32,12 +32,9 @@
         <div class="admin-conteiner">
             <div class="newpost-wrapper">
                 <div class="newpost-wrapper_text">
-                    <span class="newpost_title H1">
-                        <span>New Post</span>
-                    </span>
+                    <p class="newpost_title">New Post</p>
                     <span class="newpost_subtitle DescritpionSmall">
-                        <span>Fill out the form bellow and publish your
-                            article</span>
+                        <span>Fill out the form bellow and publish your article</span>
                     </span>
                 </div>
                 <button class="newpost-button">
@@ -58,28 +55,23 @@
                                 <div class="input-title_text">
                                     <p>Title</p>
                                 </div>
-                                <div class="input_field">
-                                    <input class="field_text" id="title">
-                                </div>
+                                <input class="input_field" id="title">
                             </div>
 
                             <div class="input-title">
                                 <div class="input-title_text">
                                     <p>Short description</p>
                                 </div>
-                                <div class="input_field">
-                                    <input class="field_text" id="descriptor">
-                                </div>
+                                <input class="input_field" id="descriptor">
                             </div>
 
                             <div class="input-author-name">
                                 <div class="input-title_text">
                                     <p>Author name</p>
                                 </div>
-                                <div class="input-field2">
-                                    <input class="field_text" id="authName">
-                                </div>
-                                <p></p>
+                                <input class="input-field2" id="authName">
+                                <div id="title-line" class="line"></div>
+                                <div id="errorMessage" class="errorMasage"></div>
                             </div>
 
                             <div class="input-upload-conteiner">
@@ -87,12 +79,22 @@
                                     <p>Author Photo </p>
                                 </div>
                                 <div class="input-upload">
+                                    <input type="file" id="fileInput" style="display: none;">
                                     <button class="input-upload_icon" id="InputAuthorImg">
                                         <img src="./images/img_admin/InputUploadIcon.svg" alt="InputUploadIcon" class="input-icon1" />
                                     </button>
-                                    <div class="input-upload-button_text">
+                                    <div class="input-upload-button_text" id="uploadButton">
                                         <p>Upload</p>
                                     </div>
+                                    <div id="changeButton" class="active-button">
+                                        <img src="./images/img_admin/InputUploadIcon.svg"/>
+                                        <p class="upload-text">Upload New</p>
+                                    </div>
+                                    <div id="deleteButton" class="active-button">
+                                        <img src="./images/img_admin/Delete.svg"/>
+                                        <p class="delete-text">Remove</p>
+                                    </div>
+
                                 </div>
                             </div>
 
@@ -123,7 +125,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
 
                             <div class="input-image-small">
                                 <div class="input-title_text">
