@@ -55,14 +55,14 @@
                                 <div class="input-title_text">
                                     <p>Title</p>
                                 </div>
-                                <input class="input_field" id="title">
+                                <input class="input_field"  maxlength="10" id="title">
                             </div>
 
                             <div class="input-title">
                                 <div class="input-title_text">
                                     <p>Short description</p>
                                 </div>
-                                <input class="input_field" id="descriptor">
+                                <input class="input_field"  maxlength="40" id="descriptor">
                             </div>
 
                             <div class="input-author-name">
@@ -87,11 +87,11 @@
                                         <p>Upload</p>
                                     </div>
                                     <div id="changeButton" class="active-button">
-                                        <img src="./images/img_admin/InputUploadIcon.svg"/>
+                                        <img src="./images/img_admin/InputUploadIcon.svg" />
                                         <p class="upload-text">Upload New</p>
                                     </div>
                                     <div id="deleteButton" class="active-button">
-                                        <img src="./images/img_admin/Delete.svg"/>
+                                        <img src="./images/img_admin/Delete.svg" />
                                         <p class="delete-text">Remove</p>
                                     </div>
 
@@ -102,7 +102,9 @@
                                 <div class="input-title_text">
                                     <p>Publish Date</p>
                                 </div>
-                                <input type="date" class="input_field" value="" id="datep">
+                                <div class="date-block">
+                                    <input type="date" class="input_field" value="" id="datep">
+                                </div>
                             </div>
 
                             <div class="input-image">
@@ -110,7 +112,8 @@
                                     <p>Hero Image </p>
                                 </div>
                                 <div class="input-image-upload">
-                                    <button class="input-image_icon">
+                                    <input type="file" id="fileInputBack" style="display: none;">
+                                    <button class="input-image_icon" id="InputBackImg">
                                         <div class="input-image_button">
                                             <img src="./images/img_admin/InputUploadIcon.svg" alt="InputUploadIcon" class="input-icon1" />
                                             <div class="input-upload-button_text">
@@ -118,7 +121,17 @@
                                             </div>
                                         </div>
                                     </button>
-                                    <div class="input-image-config">
+                                    <div class="edit-box-back">
+                                        <div id="changeButton1" class="active-button">
+                                            <img src="./images/img_admin/InputUploadIcon.svg" />
+                                            <p class="upload-text">Upload New</p>
+                                        </div>
+                                        <div id="deleteButton1" class="active-button">
+                                            <img src="./images/img_admin/Delete.svg" />
+                                            <p class="delete-text">Remove</p>
+                                        </div>
+                                    </div>
+                                    <div class="input-image-config" id="config1">
                                         <div class="input-title_text">
                                             <p>Size up to 10mb. Format: png, jpeg, gif.</p>
                                         </div>
@@ -126,30 +139,38 @@
                                 </div>
                             </div>
 
-
-                            <div class="input-image-small">
+                            <div class="input-image">
                                 <div class="input-title_text">
-                                    <p>Hero Image</p>
+                                    <p>Hero Image </p>
                                 </div>
-                                <div class="input-image-small-upload">
-                                    <div class="input-image-small_icon">
-                                        <button class="input-image-small_button">
+                                <div class="input-image-upload">
+                                    <input type="file" id="fileInputPost" style="display: none;">
+                                    <button class="input-image_icon edit2" id="InputPostImg">
+                                        <div class="input-image_button2">
                                             <img src="./images/img_admin/InputUploadIcon.svg" alt="InputUploadIcon" class="input-icon1" />
                                             <div class="input-upload-button_text">
                                                 <p>Upload</p>
                                             </div>
-                                        </button>
+                                        </div>
+                                    </button>
+                                    <div class="edit-box-back">
+                                        <div id="changeButton2" class="active-button">
+                                            <img src="./images/img_admin/InputUploadIcon.svg" />
+                                            <p class="upload-text">Upload New</p>
+                                        </div>
+                                        <div id="deleteButton2" class="active-button">
+                                            <img src="./images/img_admin/Delete.svg" />
+                                            <p class="delete-text">Remove</p>
+                                        </div>
                                     </div>
-                                    <div class="input-image-config">
+                                    <div class="input-image-config" id="config2">
                                         <div class="input-title_text">
-                                            <p>Size up to 5mb. Format: png, jpeg, gif.</p>
+                                            <p>Size up to 10mb. Format: png, jpeg, gif.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
 
                         <div class="admin-form2">
                             <div class="form-preview">
@@ -163,11 +184,20 @@
                                             <img src="./images/img_admin/dot.png" alt="." class="admin-dot2" />
                                             <img src="./images/img_admin/dot.png" alt="." class="admin-dot3" />
                                         </div>
-
+                                        <div class="wrapper-samle">
+                                            <div class="sample-big-coneiner">
+                                                <div class="sample-big-title">
+                                                    <p id="sampleBigTitle"></p>
+                                                </div>
+                                                <div class="sample-big-subtitle">
+                                                    <p id="sampleBigSubTitle"></p>
+                                                </div>
+                                            </div>
+                                            <div class="sample-big-image" id="sampleBigImage"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
 
                             <div class="card-preview">
                                 <div class="form-preview_text">

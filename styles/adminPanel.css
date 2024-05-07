@@ -182,7 +182,7 @@ header {
     align-items: flex-start;
     flex-shrink: 0;
     justify-content: space-between;
-    padding-bottom: 56px;
+    padding-bottom: 40px;
 }
 
 .admin-form1 {
@@ -221,6 +221,7 @@ header {
     border-radius: 5px 5px 0 0;
     background-color: rgba(247, 247, 247, 1);
 }
+
 
 .input-author-name {
     gap: 5px;
@@ -282,7 +283,23 @@ header {
     height: 24px;
 }
 
+
+.edit-box-back {
+    display: flex;
+    height: 34px;
+    align-items: center;
+    gap: 10px;
+}
+
 #deleteButton, #changeButton {
+    display: none;
+}
+
+#deleteButton1, #changeButton1 {
+    display: none;
+}
+
+#deleteButton2, #changeButton2 {
     display: none;
 }
 
@@ -357,6 +374,7 @@ header {
     align-self: stretch;
     align-items: flex-start;
     flex-direction: column;
+    width: 296px;
 }
 
 .input-image_icon {
@@ -374,6 +392,14 @@ header {
     border-width: 1px;
     border-radius: 6px;
     background-color: rgba(247, 247, 247, 1);
+    cursor: pointer;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.edit2 {
+    width: 296px;
 }
 
 .input-image_button {
@@ -387,6 +413,19 @@ header {
     justify-content: center;
     background-color: rgba(247, 247, 247, 1);
 }
+
+.input-image_button2 {
+    gap: 8px;
+    top: 66px;
+    left: 106px;
+    width: 85px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(247, 247, 247, 1);
+}
+
 
 
 .input-image-config {
@@ -426,20 +465,9 @@ header {
     border-style: dashed;
     border-width: 1px;
     border-radius: 6px;
+    flex-direction: column;
     background-color: rgba(247, 247, 247, 1);
-}
-
-.input-image-small_button {
-    gap: 8px;
-    top: 68px;
-    left: 106px;
-    width: 85px;
-    display: flex;
-    position: absolute;
-    align-items: center;
-    border-radius: 3px;
-    justify-content: center;
-    background-color: rgba(247, 247, 247, 1);
+    cursor: pointer;
 }
 
 /*  */
@@ -679,3 +707,69 @@ header {
     text-align: left;
     color: red;
 }
+
+
+
+
+.sample-big-title {
+    color: var(--dl-color-text-default);
+    width: 265px;
+    height: auto;
+    font-size: 20.400001525878906px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Lora;
+    font-weight: 400;
+    line-height: 24px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+
+  .sample-big-subtitle {
+    color: rgba(46, 46, 46, 0.6299999952316284);
+    width: 302px;
+    height: auto;
+    font-size: 10.200000762939453px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Oxygen;
+    font-weight: 400;
+    line-height: 12px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+
+  .sample-big-image {
+    width: 408px;
+    height: 160px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-self: stretch;
+    align-items: flex-start;
+    background-color: var(--dl-color-background-subdued);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+  }
+
+  .sample-big-coneiner {
+    gap: 4px;
+    width: 303px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+
+  .wrapper-samle {
+    gap: 36px;
+    top: 59px;
+    left: 0px;
+    width: 408px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+  }

@@ -3,33 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Upload Button</title>
-<style>
-    #changeButton {
-        display: inline-block;
-        text-align: center;
-        cursor: pointer; /* Добавленный стиль для указания на возможность взаимодействия */
-    }
-
-    #changeButton img {
-        width: 100px; /* Задайте нужную ширину изображения */
-        height: auto; /* Подстройте высоту для поддержки соотношения сторон */
-        display: block; /* Для обеспечения блочного расположения изображения */
-        margin: 0 auto; /* Центрирование изображения по горизонтали */
-    }
-
-    #changeButton .upload-text {
-        font-size: 16px; /* Размер текста */
-        margin-top: 10px; /* Отступ сверху */
-    }
-</style>
+<title>Placeholder Example</title>
 </head>
 <body>
 
-<div id="changeButton" class="active-button">
-    <img src="./images/img_admin/InputUploadIcon.svg" alt="Upload Icon">
-    <p class="upload-text">Upload New</p>
-</div>
+<p id="sampleBigTitle" contenteditable="true">Enter a title</p>
+
+<script>
+// Получаем элемент <p> по его id
+var sampleBigTitle = document.getElementById("sampleBigTitle");
+
+// Сохраняем текст по умолчанию, который будет выглядеть как placeholder
+var placeholderText = sampleBigTitle.textContent;
+
+// Добавляем обработчик события для восстановления placeholder текста при пустой строке
+sampleBigTitle.addEventListener("input", function() {
+    if (sampleBigTitle.textContent.trim() === "") {
+        sampleBigTitle.textContent = placeholderText;
+    }
+});
+
+// Добавляем обработчик события для очистки placeholder текста при фокусировке
+sampleBigTitle.addEventListener("focus", function() {
+    if (sampleBigTitle.textContent === placeholderText) {
+        sampleBigTitle.textContent = "";
+    }
+});
+
+// Добавляем обработчик события для удаления placeholder текста при начале ввода
+
+</script>
 
 </body>
 </html>
