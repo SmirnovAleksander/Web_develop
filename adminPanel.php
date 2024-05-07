@@ -37,12 +37,13 @@
                         <span>Fill out the form bellow and publish your article</span>
                     </span>
                 </div>
-                <button class="newpost-button">
+                <button class="newpost-button" id="publishButton" onclick="handleInput()">
                     <span class="newpost-button_title Body">
                         <span>Publish</span>
                     </span>
                 </button>
             </div>
+            <div id="CheckErrorContainer"></div>
             <div class="admin-cards">
                 <div class="admin-main-information">
                     <div class="main-information-title H2">
@@ -55,21 +56,21 @@
                                 <div class="input-title_text">
                                     <p>Title</p>
                                 </div>
-                                <input class="input_field"  maxlength="10" id="title">
+                                <input class="input_field" maxlength="10" id="title">
                             </div>
 
                             <div class="input-title">
                                 <div class="input-title_text">
                                     <p>Short description</p>
                                 </div>
-                                <input class="input_field"  maxlength="40" id="descriptor">
+                                <input class="input_field" maxlength="40" id="descriptor">
                             </div>
 
                             <div class="input-author-name">
                                 <div class="input-title_text">
                                     <p>Author name</p>
                                 </div>
-                                <input class="input-field2" id="authName">
+                                <input class="input-field2" id="authName" maxlength="15">
                                 <div id="title-line" class="line"></div>
                                 <div id="errorMessage" class="errorMasage"></div>
                             </div>
@@ -103,7 +104,7 @@
                                     <p>Publish Date</p>
                                 </div>
                                 <div class="date-block">
-                                    <input type="date" class="input_field" value="" id="datep">
+                                    <input type="date" class="input_field" value="" id="dateAutor">
                                 </div>
                             </div>
 
@@ -121,14 +122,16 @@
                                             </div>
                                         </div>
                                     </button>
-                                    <div class="edit-box-back">
-                                        <div id="changeButton1" class="active-button">
-                                            <img src="./images/img_admin/InputUploadIcon.svg" />
-                                            <p class="upload-text">Upload New</p>
-                                        </div>
-                                        <div id="deleteButton1" class="active-button">
-                                            <img src="./images/img_admin/Delete.svg" />
-                                            <p class="delete-text">Remove</p>
+                                    <div id="editBoxBack">
+                                        <div class="edit-box-back">
+                                            <div id="changeButton1" class="active-button">
+                                                <img src="./images/img_admin/InputUploadIcon.svg" />
+                                                <p class="upload-text">Upload New</p>
+                                            </div>
+                                            <div id="deleteButton1" class="active-button">
+                                                <img src="./images/img_admin/Delete.svg" />
+                                                <p class="delete-text">Remove</p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="input-image-config" id="config1">
@@ -153,16 +156,19 @@
                                             </div>
                                         </div>
                                     </button>
-                                    <div class="edit-box-back">
-                                        <div id="changeButton2" class="active-button">
-                                            <img src="./images/img_admin/InputUploadIcon.svg" />
-                                            <p class="upload-text">Upload New</p>
-                                        </div>
-                                        <div id="deleteButton2" class="active-button">
-                                            <img src="./images/img_admin/Delete.svg" />
-                                            <p class="delete-text">Remove</p>
+                                    <div id="editBoxBack1">
+                                        <div class="edit-box-back">
+                                            <div id="changeButton2" class="active-button">
+                                                <img src="./images/img_admin/InputUploadIcon.svg" />
+                                                <p class="upload-text">Upload New</p>
+                                            </div>
+                                            <div id="deleteButton2" class="active-button">
+                                                <img src="./images/img_admin/Delete.svg" />
+                                                <p class="delete-text">Remove</p>
+                                            </div>
                                         </div>
                                     </div>
+
                                     <div class="input-image-config" id="config2">
                                         <div class="input-title_text">
                                             <p>Size up to 10mb. Format: png, jpeg, gif.</p>
@@ -197,15 +203,32 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="blure-block"></div>
+                                <div class="blure-block2"></div>
                             </div>
 
                             <div class="card-preview">
+                                <div class="blure-block3"></div>
+                                <div class="blure-block4"></div>
                                 <div class="form-preview_text">
                                     <p>Post card preview</p>
                                 </div>
                                 <div class="card-preview-wrapper">
                                     <div class="card-preview-conteiner">
-
+                                        <div class="card-conteiner">
+                                            <div class="card-image" id="sampleSmallImage"></div>
+                                            <div class="card-line"></div>
+                                            <div class="card-title">
+                                                <p class="card-title__name" id="cardTitle"></p>
+                                                <p class="card-title__description" id="cardSubTitle"></p>
+                                            </div>
+                                            <div class="card-line"></div>
+                                            <div class="card-footer-conteiner">
+                                                <div class="card-img" id="CardImageInput"></div>
+                                                <p class="card-name" id="CardNameInput"></p>
+                                                <p class="card-date" id="CardDateInput"></p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -222,12 +245,7 @@
                         <div class="input-title_text">
                             <p>Post content (plain text)</p>
                         </div>
-                        <div class="input-block">
-                            <div class="input-block_text">
-                                <p>Type anything you want ...</p>
-                            </div>
-
-                        </div>
+                        <textarea class="input-block" placeholder="Type anything you want ..." id="textareaInput"></textarea>
                     </div>
                 </div>
             </div>

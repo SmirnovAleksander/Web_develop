@@ -3,36 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Placeholder Example</title>
+<title>Date Display</title>
 </head>
 <body>
+  <input type="date" class="input_field" value="" id="dateAutor">
+  <div id="CardDateInput"></div>
 
-<p id="sampleBigTitle" contenteditable="true">Enter a title</p>
+  <script>
+    function saveAndDisplayDate() {
+      var inputDate = document.getElementById("dateAutor").value;
+      var savedDate = new Date(inputDate); // Сохраняем дату в переменную
+      var day = savedDate.getDate();
+      var month = savedDate.getMonth() + 1; // Месяцы начинаются с 0, поэтому добавляем 1
+      var year = savedDate.getFullYear() % 100; // Получаем последние две цифры года
 
-<script>
-// Получаем элемент <p> по его id
-var sampleBigTitle = document.getElementById("sampleBigTitle");
+      // Форматируем дату в строку "DD/MM/YY"
+      var formattedDate = `${day}/${month}/${year}`;
 
-// Сохраняем текст по умолчанию, который будет выглядеть как placeholder
-var placeholderText = sampleBigTitle.textContent;
-
-// Добавляем обработчик события для восстановления placeholder текста при пустой строке
-sampleBigTitle.addEventListener("input", function() {
-    if (sampleBigTitle.textContent.trim() === "") {
-        sampleBigTitle.textContent = placeholderText;
+      console.log("Selected date:", formattedDate);
+      CardDate(formattedDate);
     }
-});
 
-// Добавляем обработчик события для очистки placeholder текста при фокусировке
-sampleBigTitle.addEventListener("focus", function() {
-    if (sampleBigTitle.textContent === placeholderText) {
-        sampleBigTitle.textContent = "";
+    var CardDateInput = document.getElementById("CardDateInput");
+
+    function CardDate(text) {
+      CardDateInput.innerText = text;
     }
-});
 
-// Добавляем обработчик события для удаления placeholder текста при начале ввода
+    // Устанавливаем слушатель события для поля ввода даты
+    document.getElementById("dateAutor").addEventListener("change", function() {
+      saveAndDisplayDate();
+    });
 
-</script>
-
+    // Вызываем функцию при загрузке страницы
+    saveAndDisplayDate();
+  </script>
 </body>
 </html>

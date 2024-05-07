@@ -1,91 +1,76 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Загрузка изображения</title>
-<style>
-.input-upload_icon {
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    border-color: rgba(211, 211, 211, 1);
-    border-style: dashed;
-    border-width: 1px;
-    border-radius: 100%;
-    background-color: rgba(247, 247, 247, 1);
-    cursor: pointer;
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script>
+        function validateInputs() {
+            var title = document.getElementById('titleInput').value;
+            var description = document.getElementById('descriptorInput').value;
+            var authorName = document.getElementById('authNameInput').value;
+            var image = document.getElementById('imageInput').value; // Получаем значение поля с изображением
 
-.input-icon1 {
-    width: auto;
-    height: 100%;
-    margin: 0 auto;
-}
+            if (title === '') {
+                return "Title field is empty!";
+            }
 
-#deleteButton, #changeButton {
-    display: none;
-}
-</style>
+            if (description === '') {
+                return "Description field is empty!";
+            }
+
+            if (authorName === '') {
+                return "Author name field is empty!";
+            }
+
+            if (image === '') { // Проверяем, что поле с изображением не пустое
+                return "Image field is empty!";
+            }
+
+            // Если все поля заполнены, вернуть null
+            return null;
+        }
+
+        function handleInput() {
+            var errorMessage = validateInputs();
+
+            if (errorMessage) {
+                console.error(errorMessage);
+            } else {
+                // Ваша текущая логика обработки ввода
+                var title = document.getElementById('titleInput').value;
+                var description = document.getElementById('descriptorInput').value;
+                var authorName = document.getElementById('authNameInput').value;
+                var image = document.getElementById('imageInput').value; // Получаем значение поля с изображением
+
+                console.log("Title:", title);
+                console.log("Description:", description);
+                console.log("Author name:", authorName);
+                console.log("Image:", image);
+
+                // Добавьте здесь вызовы ваших функций для обработки ввода
+            }
+        }
+    </script>
 </head>
+
 <body>
+    <form>
+        <label for="titleInput">Title:</label><br>
+        <input type="text" id="titleInput" name="titleInput"><br><br>
 
-<input type="file" id="fileInput" style="display: none;">
-<button class="input-upload_icon" id="InputAuthorImg">
-    <img src="./images/img_admin/InputUploadIcon.svg" alt="InputUploadIcon" class="input-icon1" />
-</button>
+        <label for="descriptorInput">Description:</label><br>
+        <input type="text" id="descriptorInput" name="descriptorInput"><br><br>
 
-<button id="deleteButton">Удалить</button>
-<button id="changeButton">Загрузить новую</button>
+        <label for="authNameInput">Author Name:</label><br>
+        <input type="text" id="authNameInput" name="authNameInput"><br><br>
 
-<script>
-var InputAuthorImg = document.getElementById("InputAuthorImg");
-var deleteButton = document.getElementById("deleteButton");
-var changeButton = document.getElementById("changeButton");
+        <label for="imageInput">Image URL:</label><br> <!-- Добавляем поле для ввода URL изображения -->
+        <input type="text" id="imageInput" name="imageInput"><br><br>
 
-InputAuthorImg.addEventListener('click', function() {
-    document.getElementById('fileInput').click();
-});
-
-document.getElementById('fileInput').addEventListener('change', function(event) {
-    var file = event.target.files[0];
-    var reader = new FileReader();
-
-    reader.onload = function() {
-        var imageData = reader.result;
-        var rectangle = InputAuthorImg;
-        rectangle.style.backgroundImage = 'url(' + imageData + ')';
-        // Удаление тега <img> из кнопки
-        rectangle.innerHTML = '';
-
-        // Отображение кнопок удаления и загрузки новой картинки
-        deleteButton.style.display = 'inline';
-        changeButton.style.display = 'inline';
-    };
-
-    reader.readAsDataURL(file);
-});
-
-deleteButton.addEventListener('click', function() {
-    // Удаление фонового изображения
-    InputAuthorImg.style.backgroundImage = '';
-    // Показать тег <img> снова
-    InputAuthorImg.innerHTML = '<img src="./images/img_admin/InputUploadIcon.svg" alt="InputUploadIcon" class="input-icon1" />';
-    // Скрыть кнопки
-    deleteButton.style.display = 'none';
-    changeButton.style.display = 'none';
-});
-
-changeButton.addEventListener('click', function() {
-    // Сбросить значение файла
-    document.getElementById('fileInput').value = '';
-    // Триггер клика на input file
-    document.getElementById('fileInput').click();
-});
-</script>
-
+        <button type="button" onclick="handleInput()">Handle Input</button>
+    </form>
 </body>
+
 </html>
