@@ -278,7 +278,7 @@ header {
 }
 
 .active-button {
-    /* display: flex; */
+    display: flex;
     height: 34px;
     /* background-color: #bdbdbd; */
     cursor: pointer;
@@ -293,6 +293,7 @@ header {
 
 
 .edit-box-back {
+    padding-top: 10px;
     display: flex;
     height: 34px;
     align-items: center;
@@ -380,7 +381,7 @@ header {
 
 
 .input-image-upload {
-    gap: 12px;
+    /* gap: 12px; */
     display: flex;
     align-self: stretch;
     align-items: flex-start;
@@ -440,6 +441,7 @@ header {
 
 
 .input-image-config {
+    padding-top: 10px;
     display: flex;
     align-self: stretch;
     align-items: center;

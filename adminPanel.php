@@ -56,7 +56,7 @@
                                 <div class="input-title_text">
                                     <p>Title</p>
                                 </div>
-                                <input class="input_field" maxlength="15" id="title">      
+                                <input class="input_field" maxlength="15" id="title">
                                 <div id="errorMessage" class="errorMasage"></div>
                             </div>
 
@@ -124,7 +124,7 @@
                                         </div>
                                     </button>
                                     <div id="editBoxBack">
-                                        <div class="edit-box-back">
+                                        <div class="edit-box-back" id="editBoxBack">
                                             <div id="changeButton1" class="active-button">
                                                 <img src="./images/img_admin/InputUploadIcon.svg" />
                                                 <p class="upload-text">Upload New</p>
@@ -247,6 +247,7 @@
                             <p>Post content (plain text)</p>
                         </div>
                         <textarea class="input-block" placeholder="Type anything you want ..." id="textareaInput"></textarea>
+                        <div id="errorMessage3" class="errorMasage"></div>
                     </div>
                 </div>
             </div>
