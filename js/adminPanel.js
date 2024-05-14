@@ -2,6 +2,8 @@ var titleInput = document.getElementById("title");
 var descriptorInput = document.getElementById("descriptor");
 var authNameInput = document.getElementById("authName");
 var errorMessageElement = document.getElementById("errorMessage");
+var errorMessageElement1 = document.getElementById("errorMessage1");
+var errorMessageElement2 = document.getElementById("errorMessage2");
 var titleLine = document.getElementById("title-line");
 
 function handleTitleInput() {
@@ -36,15 +38,44 @@ descriptorInput.placeholder = "Please, enter any description";
 authNameInput.addEventListener("input", handleAuthNameInput);
 authNameInput.placeholder = "Please, enter Author name";
 
+
+
+titleInput.addEventListener("input", function () {
+  // Проверка на пустое поле
+  if (titleInput.value.trim() === "") {
+    errorMessageElement.textContent = "Title is required.";
+    titleInput.style.backgroundColor = "rgba(255, 255, 255, 1)";
+    titleInput.style.borderColor = "#E86961"
+  } else {
+    titleInput.style.borderColor = "black"
+    errorMessageElement.textContent = ""; // Очищаем сообщение об ошибке
+    titleInput.style.backgroundColor = "rgba(247, 247, 247, 1)";
+  }
+});
+
+
+descriptorInput.addEventListener("input", function () {
+  // Проверка на пустое поле
+  if (descriptorInput.value.trim() === "") {
+    errorMessageElement1.textContent = "Description is required.";
+    descriptorInput.style.backgroundColor = "rgba(255, 255, 255, 1)";
+    descriptorInput.style.borderColor = "#E86961"
+  } else {
+    descriptorInput.style.borderColor = "black"
+    errorMessageElement1.textContent = ""; // Очищаем сообщение об ошибке
+    descriptorInput.style.backgroundColor = "rgba(247, 247, 247, 1)";
+  }
+});
+
+
+
 authNameInput.addEventListener("input", function () {
   // Проверка на пустое поле
   if (authNameInput.value.trim() === "") {
-    errorMessageElement.textContent = "Author name is required.";
-    titleLine.style.backgroundColor = "#E86961";
+    errorMessageElement2.textContent = "Author name is required.";
     authNameInput.style.backgroundColor = "rgba(255, 255, 255, 1)";
   } else {
-    errorMessageElement.textContent = ""; // Очищаем сообщение об ошибке
-    titleLine.style.backgroundColor = "#bdbdbd";
+    errorMessageElement2.textContent = ""; // Очищаем сообщение об ошибке
     authNameInput.style.backgroundColor = "rgba(247, 247, 247, 1)";
   }
 });
@@ -297,6 +328,7 @@ function validateInputs() {
   var textarea = document.getElementById("textareaInput");
   if (title === "") {
     return "Title field is empty!";
+
   }
 
   if (description === "") {
@@ -305,6 +337,7 @@ function validateInputs() {
 
   if (authorName === "") {
     return "Author name field is empty!";
+    
   }
 
   if (textarea.value === "") {

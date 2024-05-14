@@ -56,7 +56,8 @@
                                 <div class="input-title_text">
                                     <p>Title</p>
                                 </div>
-                                <input class="input_field" maxlength="10" id="title">
+                                <input class="input_field" maxlength="15" id="title">      
+                                <div id="errorMessage" class="errorMasage"></div>
                             </div>
 
                             <div class="input-title">
@@ -64,15 +65,15 @@
                                     <p>Short description</p>
                                 </div>
                                 <input class="input_field" maxlength="40" id="descriptor">
+                                <div id="errorMessage1" class="errorMasage"></div>
                             </div>
 
-                            <div class="input-author-name">
+                            <div class="input-title">
                                 <div class="input-title_text">
                                     <p>Author name</p>
                                 </div>
-                                <input class="input-field2" id="authName" maxlength="15">
-                                <div id="title-line" class="line"></div>
-                                <div id="errorMessage" class="errorMasage"></div>
+                                <input class="input_field" maxlength="15" id="authName">
+                                <div id="errorMessage2" class="errorMasage"></div>
                             </div>
 
                             <div class="input-upload-conteiner">
