@@ -46,7 +46,7 @@ const uploadButton = document.getElementById("uploadButton");
 const deleteButton = document.getElementById("deleteButton");
 const changeButton = document.getElementById("changeButton");
 const fileInput = document.getElementById("fileInput");
-
+let imageAuthor;
 InputAuthorImg.addEventListener("click", () => {
   fileInput.click();
 });
@@ -57,6 +57,7 @@ fileInput.addEventListener("change", (event) => {
 
   reader.onload = () => {
     const imageData = reader.result;
+    imageAuthor = imageData;
     InputAuthorImg.style.backgroundImage = `url(${imageData})`;
     changeCardAuthor(imageData);
     InputAuthorImg.innerHTML = "";
@@ -93,6 +94,7 @@ const changeButton1 = document.getElementById("changeButton1");
 const config1 = document.getElementById("config1");
 const editBoxBack = document.getElementById("editBoxBack");
 const fileInputBack = document.getElementById("fileInputBack");
+let imageBack;
 editBoxBack.style.height = "0";
 
 InputBackImg.addEventListener("click", () => {
@@ -106,6 +108,7 @@ fileInputBack.addEventListener("change", (event) => {
   reader.onload = () => {
     editBoxBack.style.height = "34px";
     const imageData = reader.result;
+    imageBack = imageData;
     InputBackImg.style.backgroundImage = `url(${imageData})`;
     changeBackground(imageData);
     InputBackImg.innerHTML = "";
@@ -151,6 +154,7 @@ const config2 = document.getElementById("config2");
 const editBoxBack1 = document.getElementById("editBoxBack1");
 const fileInputPost = document.getElementById("fileInputPost");
 editBoxBack1.style.height = "0";
+let imagePost;
 
 InputPostImg.addEventListener("click", () => {
   fileInputPost.click();
@@ -163,6 +167,7 @@ fileInputPost.addEventListener("change", (event) => {
   reader.onload = () => {
     editBoxBack1.style.height = "34px";
     const imageData = reader.result;
+    imagePost = imageData;
     InputPostImg.style.backgroundImage = `url(${imageData})`;
     changeBackgroundSmall(imageData);
     InputPostImg.innerHTML = "";
@@ -245,7 +250,6 @@ function CardName(text) {
   CardNameInput.innerText = text;
 }
 
-
 // ___________________________
 
 function validateTitle() {
@@ -301,11 +305,12 @@ function validateAuthName() {
   }
 }
 
+let text;
 // Функция для проверки поля ввода текста
 function validateTextarea() {
   var textarea = document.getElementById("textareaInput");
   var errorMessageElement3 = document.getElementById("errorMessage3");
-
+  text = textarea.value;
   if (textarea.value.trim() === "") {
     errorMessageElement3.textContent = "Correct format is “*****@***.**”";
     textarea.style.borderColor = "#E86961";
@@ -346,6 +351,28 @@ textarea.addEventListener("input", function () {
     errorMessageElement3.style.color = "#999999"; // Меняем цвет текста ошибки
     textarea.style.borderColor = "black";
   }
+});
+
+let date;
+function saveAndDisplayDate() {
+  var inputDate = document.getElementById("dateAutor").value;
+  var savedDate = new Date(inputDate); // Сохраняем дату в переменную
+  var day = savedDate.getDate();
+  var month = savedDate.getMonth() + 1; // Месяцы начинаются с 0, поэтому добавляем 1
+  var year = savedDate.getFullYear() % 100; // Получаем последние две цифры года
+  // Форматируем дату в строку "DD/MM/YY"
+  var formattedDate = `${day}/${month}/${year}`;
+  date = formattedDate;
+  CardDate(formattedDate);
+}
+var CardDateInput = document.getElementById("CardDateInput");
+CardDateInput.textContent = "4/19/23";
+function CardDate(text) {
+  CardDateInput.innerText = text;
+}
+// Устанавливаем слушатель события для поля ввода даты
+document.getElementById("dateAutor").addEventListener("change", function () {
+  saveAndDisplayDate();
 });
 
 function validateInputs() {
@@ -408,20 +435,47 @@ function handleInput() {
     var title = document.getElementById("title").value;
     var description = document.getElementById("descriptor").value;
     var authorName = document.getElementById("authName").value;
-    var CheckErrorContainer = document.getElementById("CheckErrorContainer");
-    var textarea = document.getElementById("textareaInput");
 
     console.log("Title:", title);
     console.log("Description:", description);
     console.log("Author name:", authorName);
-    console.log("Text area:", textarea);
+    console.log("Text area:", text);
+    console.log("Author IMG:", imageAuthor);
+    console.log("Back IMG:", imageBack);
+    console.log("Post IMG:", imagePost);
+    console.log("Date:", date);
 
-    var formData = new FormData();
-    formData.append('title', title);
-    formData.append('description', description);
-    formData.append('authorName', authorName);
-    formData.append('textarea', textarea);
-    formData.append('inputDate', CardDateInput);
+    var postData = {
+      title: title,
+      subtitle: description,
+      author: authorName,
+      content: text,
+      author_url: imageAuthor,
+      imageBack: imageBack,
+      imagePost: imagePost,
+      publish_date: date,
+    };
+
+    fetch("your_php_script.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(postData),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Post created:", data);
+        // Очистите поля ввода или выполните другие действия, если необходимо
+      })
+      .catch((error) => {
+        console.error("Error creating post:", error);
+      });
 
     CheckErrorContainer.innerHTML = `
     <div class="error-box_conteiner1">
@@ -430,28 +484,5 @@ function handleInput() {
                         <p>Publish Complete!</p>
                     </div>
                 </div>`;
-    // Добавьте здесь вызовы ваших функций для обработки ввода
   }
 }
-
-// _______________________________
-
-function saveAndDisplayDate() {
-  var inputDate = document.getElementById("dateAutor").value;
-  var savedDate = new Date(inputDate); // Сохраняем дату в переменную
-  var day = savedDate.getDate();
-  var month = savedDate.getMonth() + 1; // Месяцы начинаются с 0, поэтому добавляем 1
-  var year = savedDate.getFullYear() % 100; // Получаем последние две цифры года
-  // Форматируем дату в строку "DD/MM/YY"
-  var formattedDate = `${day}/${month}/${year}`;
-  CardDate(formattedDate);
-}
-var CardDateInput = document.getElementById("CardDateInput");
-CardDateInput.textContent = "4/19/23";
-function CardDate(text) {
-  CardDateInput.innerText = text;
-}
-// Устанавливаем слушатель события для поля ввода даты
-document.getElementById("dateAutor").addEventListener("change", function () {
-  saveAndDisplayDate();
-});
