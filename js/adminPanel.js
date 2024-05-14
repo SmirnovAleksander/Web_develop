@@ -86,8 +86,6 @@ changeButton.addEventListener("click", () => {
 });
 
 // ___________________________
-// Получаем DOM элементы
-
 const InputBackImg = document.getElementById("InputBackImg");
 const deleteButton1 = document.getElementById("deleteButton1");
 const changeButton1 = document.getElementById("changeButton1");
@@ -260,16 +258,15 @@ function validateTitle() {
     errorMessageElement.textContent = "Title is required.";
     titleInput.style.backgroundColor = "rgba(255, 255, 255, 1)";
     titleInput.style.borderColor = "#E86961";
-    return false; // Возвращаем false, если поле пустое
+    return false; 
   } else {
     titleInput.style.borderColor = "black";
-    errorMessageElement.textContent = ""; // Очищаем сообщение об ошибке
+    errorMessageElement.textContent = ""; 
     titleInput.style.backgroundColor = "rgba(247, 247, 247, 1)";
-    return true; // Возвращаем true, если поле не пустое
+    return true; 
   }
 }
 
-// Функция для проверки поля описания
 function validateDescriptor() {
   var descriptorInput = document.getElementById("descriptor");
   var errorMessageElement1 = document.getElementById("errorMessage1");
@@ -278,16 +275,15 @@ function validateDescriptor() {
     errorMessageElement1.textContent = "Description is required.";
     descriptorInput.style.backgroundColor = "rgba(255, 255, 255, 1)";
     descriptorInput.style.borderColor = "#E86961";
-    return false; // Возвращаем false, если поле пустое
+    return false; 
   } else {
     descriptorInput.style.borderColor = "black";
-    errorMessageElement1.textContent = ""; // Очищаем сообщение об ошибке
+    errorMessageElement1.textContent = ""; 
     descriptorInput.style.backgroundColor = "rgba(247, 247, 247, 1)";
-    return true; // Возвращаем true, если поле не пустое
+    return true; 
   }
 }
 
-// Функция для проверки поля имени автора
 function validateAuthName() {
   var authNameInput = document.getElementById("authName");
   var errorMessageElement2 = document.getElementById("errorMessage2");
@@ -296,17 +292,16 @@ function validateAuthName() {
     errorMessageElement2.textContent = "Author name is required.";
     authNameInput.style.backgroundColor = "rgba(255, 255, 255, 1)";
     authNameInput.style.borderColor = "#E86961";
-    return false; // Возвращаем false, если поле пустое
+    return false; 
   } else {
     authNameInput.style.borderColor = "black";
-    errorMessageElement2.textContent = ""; // Очищаем сообщение об ошибке
+    errorMessageElement2.textContent = ""; 
     authNameInput.style.backgroundColor = "rgba(247, 247, 247, 1)";
-    return true; // Возвращаем true, если поле не пустое
+    return true; 
   }
 }
 
 let text;
-// Функция для проверки поля ввода текста
 function validateTextarea() {
   var textarea = document.getElementById("textareaInput");
   var errorMessageElement3 = document.getElementById("errorMessage3");
@@ -314,41 +309,39 @@ function validateTextarea() {
   if (textarea.value.trim() === "") {
     errorMessageElement3.textContent = "Correct format is “*****@***.**”";
     textarea.style.borderColor = "#E86961";
-    return false; // Возвращаем false, если поле пустое
+    return false; 
   } else {
     textarea.style.borderColor = "black";
-    errorMessageElement3.textContent = ""; // Очищаем сообщение об ошибке
-    return true; // Возвращаем true, если поле не пустое
+    errorMessageElement3.textContent = ""; 
+    return true;
   }
 }
 
-// Обработчик события для поля заголовка
 titleInput.addEventListener("input", function () {
   if (titleInput.value.trim() !== "") {
-    errorMessageElement.style.color = "#999999"; // Меняем цвет текста ошибки
+    errorMessageElement.style.color = "#999999"; 
     titleInput.style.borderColor = "black";
   }
 });
 
-// Обработчик события для поля описания
 descriptorInput.addEventListener("input", function () {
   if (descriptorInput.value.trim() !== "") {
-    errorMessageElement1.style.color = "#999999"; // Меняем цвет текста ошибки
+    errorMessageElement1.style.color = "#999999"; 
     descriptorInput.style.borderColor = "black";
   }
 });
 
-// Обработчик события для поля имени автора
+
 authNameInput.addEventListener("input", function () {
   if (authNameInput.value.trim() !== "") {
-    errorMessageElement2.style.color = "#999999"; // Меняем цвет текста ошибки
+    errorMessageElement2.style.color = "#999999";
     authNameInput.style.borderColor = "black";
   }
 });
 
 textarea.addEventListener("input", function () {
   if (textarea.value.trim() !== "") {
-    errorMessageElement3.style.color = "#999999"; // Меняем цвет текста ошибки
+    errorMessageElement3.style.color = "#999999"; 
     textarea.style.borderColor = "black";
   }
 });
@@ -356,11 +349,10 @@ textarea.addEventListener("input", function () {
 let date;
 function saveAndDisplayDate() {
   var inputDate = document.getElementById("dateAutor").value;
-  var savedDate = new Date(inputDate); // Сохраняем дату в переменную
+  var savedDate = new Date(inputDate); 
   var day = savedDate.getDate();
-  var month = savedDate.getMonth() + 1; // Месяцы начинаются с 0, поэтому добавляем 1
-  var year = savedDate.getFullYear() % 100; // Получаем последние две цифры года
-  // Форматируем дату в строку "DD/MM/YY"
+  var month = savedDate.getMonth() + 1; 
+  var year = savedDate.getFullYear() % 100; 
   var formattedDate = `${day}/${month}/${year}`;
   date = formattedDate;
   CardDate(formattedDate);
@@ -370,7 +362,6 @@ CardDateInput.textContent = "4/19/23";
 function CardDate(text) {
   CardDateInput.innerText = text;
 }
-// Устанавливаем слушатель события для поля ввода даты
 document.getElementById("dateAutor").addEventListener("change", function () {
   saveAndDisplayDate();
 });
@@ -414,7 +405,6 @@ function validateInputs() {
     return "Please enter a valid date!";
   }
 
-  // Если все поля заполнены, вернуть null
   return null;
 }
 
@@ -431,7 +421,6 @@ function handleInput() {
                     </div>
                 </div>`;
   } else {
-    // Ваша текущая логика обработки ввода
     var title = document.getElementById("title").value;
     var description = document.getElementById("descriptor").value;
     var authorName = document.getElementById("authName").value;
@@ -471,7 +460,6 @@ function handleInput() {
       })
       .then((data) => {
         console.log("Post created:", data);
-        // Очистите поля ввода или выполните другие действия, если необходимо
       })
       .catch((error) => {
         console.error("Error creating post:", error);
