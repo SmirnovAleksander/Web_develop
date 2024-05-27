@@ -13,7 +13,7 @@
             <img class="card-img" src="<?= $row['author_url'] ?>" alt="<?= $row['author'] ?>">
             <div class='card-footer-block'>
                 <p class="card-name"><?= $row['author'] ?></p>
-                <p class="card-date"><?= date("m/d/Y", $row['publish_date']) ?></p>
+                <p class="card-date"><?= date("m/d/Y", 1443139200) ?></p>
             </div>
         </div>
     </div>

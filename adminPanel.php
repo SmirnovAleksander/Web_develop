@@ -56,7 +56,7 @@
                                 <div class="input-title_text">
                                     <p>Title</p>
                                 </div>
-                                <input class="input_field" maxlength="15" id="title">
+                                <input class="input_field" maxlength="15" id="title" require>
                                 <div id="errorMessage" class="errorMasage"></div>
                             </div>
 

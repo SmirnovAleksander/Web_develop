@@ -1,3 +1,7 @@
+window.document.addEventListener('DOMContentLoaded', () => {
+
+})
+
 var titleInput = document.getElementById("title");
 var descriptorInput = document.getElementById("descriptor");
 var authNameInput = document.getElementById("authName");
@@ -258,12 +262,12 @@ function validateTitle() {
     errorMessageElement.textContent = "Title is required.";
     titleInput.style.backgroundColor = "rgba(255, 255, 255, 1)";
     titleInput.style.borderColor = "#E86961";
-    return false; 
+    return false;
   } else {
     titleInput.style.borderColor = "black";
-    errorMessageElement.textContent = ""; 
+    errorMessageElement.textContent = "";
     titleInput.style.backgroundColor = "rgba(247, 247, 247, 1)";
-    return true; 
+    return true;
   }
 }
 
@@ -275,12 +279,12 @@ function validateDescriptor() {
     errorMessageElement1.textContent = "Description is required.";
     descriptorInput.style.backgroundColor = "rgba(255, 255, 255, 1)";
     descriptorInput.style.borderColor = "#E86961";
-    return false; 
+    return false;
   } else {
     descriptorInput.style.borderColor = "black";
-    errorMessageElement1.textContent = ""; 
+    errorMessageElement1.textContent = "";
     descriptorInput.style.backgroundColor = "rgba(247, 247, 247, 1)";
-    return true; 
+    return true;
   }
 }
 
@@ -292,12 +296,12 @@ function validateAuthName() {
     errorMessageElement2.textContent = "Author name is required.";
     authNameInput.style.backgroundColor = "rgba(255, 255, 255, 1)";
     authNameInput.style.borderColor = "#E86961";
-    return false; 
+    return false;
   } else {
     authNameInput.style.borderColor = "black";
-    errorMessageElement2.textContent = ""; 
+    errorMessageElement2.textContent = "";
     authNameInput.style.backgroundColor = "rgba(247, 247, 247, 1)";
-    return true; 
+    return true;
   }
 }
 
@@ -309,24 +313,24 @@ function validateTextarea() {
   if (textarea.value.trim() === "") {
     errorMessageElement3.textContent = "Correct format is “*****@***.**”";
     textarea.style.borderColor = "#E86961";
-    return false; 
+    return false;
   } else {
     textarea.style.borderColor = "black";
-    errorMessageElement3.textContent = ""; 
+    errorMessageElement3.textContent = "";
     return true;
   }
 }
 
 titleInput.addEventListener("input", function () {
   if (titleInput.value.trim() !== "") {
-    errorMessageElement.style.color = "#999999"; 
+    errorMessageElement.style.color = "#999999";
     titleInput.style.borderColor = "black";
   }
 });
 
 descriptorInput.addEventListener("input", function () {
   if (descriptorInput.value.trim() !== "") {
-    errorMessageElement1.style.color = "#999999"; 
+    errorMessageElement1.style.color = "#999999";
     descriptorInput.style.borderColor = "black";
   }
 });
@@ -341,18 +345,19 @@ authNameInput.addEventListener("input", function () {
 
 textarea.addEventListener("input", function () {
   if (textarea.value.trim() !== "") {
-    errorMessageElement3.style.color = "#999999"; 
+    errorMessageElement3.style.color = "#999999";
     textarea.style.borderColor = "black";
   }
 });
 
 let date;
+const inputDataDate = document.getElementById("dateAutor").value;
 function saveAndDisplayDate() {
   var inputDate = document.getElementById("dateAutor").value;
-  var savedDate = new Date(inputDate); 
+  var savedDate = new Date(inputDate);
   var day = savedDate.getDate();
-  var month = savedDate.getMonth() + 1; 
-  var year = savedDate.getFullYear() % 100; 
+  var month = savedDate.getMonth() + 1;
+  var year = savedDate.getFullYear() % 100;
   var formattedDate = `${day}/${month}/${year}`;
   date = formattedDate;
   CardDate(formattedDate);
@@ -424,47 +429,6 @@ function handleInput() {
     var title = document.getElementById("title").value;
     var description = document.getElementById("descriptor").value;
     var authorName = document.getElementById("authName").value;
-
-    console.log("Title:", title);
-    console.log("Description:", description);
-    console.log("Author name:", authorName);
-    console.log("Text area:", text);
-    console.log("Author IMG:", imageAuthor);
-    console.log("Back IMG:", imageBack);
-    console.log("Post IMG:", imagePost);
-    console.log("Date:", date);
-
-    var postData = {
-      title: title,
-      subtitle: description,
-      author: authorName,
-      content: text,
-      author_url: imageAuthor,
-      imageBack: imageBack,
-      imagePost: imagePost,
-      publish_date: date,
-    };
-
-    fetch("your_php_script.php", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(postData),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log("Post created:", data);
-      })
-      .catch((error) => {
-        console.error("Error creating post:", error);
-      });
-
     CheckErrorContainer.innerHTML = `
     <div class="error-box_conteiner1">
                     <div class="error-box">
@@ -472,5 +436,36 @@ function handleInput() {
                         <p>Publish Complete!</p>
                     </div>
                 </div>`;
+
+
+
+
+    const card_post = {
+      title: title,
+      subtitle: description,
+      content: text,
+      author: authorName,
+      author_url: imageAuthor,
+      publish_date: inputDataDate,
+      image_url: imageBack,
+      featured: 0,
+      card_url: imagePost,
+    };
+
+
+    console.log(card_post);
+
+    fetch("http://localhost:8001/api.php", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(card_post),
+    }).then(function (response) {
+      if (!response.ok) {
+        throw new Error("Bad status code from server.");
+      }
+      return response.json();
+    });
   }
 }
