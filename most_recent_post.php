@@ -1,8 +1,6 @@
 <a>
     <div class="card-conteiner">
-        <div class="card-image">
-            <img src="<?= $row['image_url'] ?>" alt="IMAGE"  class="image-block">
-        </div>
+    <img src="<?= $row['image_url'] ?>" alt="IMAGE"  class="image-block-card">
         <div class="card-line"></div>
         <div class="card-title">
             <p class="card-title__name"><?= $row['title'] ?></p>

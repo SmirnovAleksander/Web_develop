@@ -6,11 +6,14 @@
     text-decoration: none;
 }
 
+
 body {
     margin: 0;
     padding: 0;
     margin: 0px auto;
+    overflow-x:hidden;  
 }
+
 
 .header-wrapper {
     background-image: url(http://localhost:8001/static/images/img_home/MainBack.png);
@@ -20,11 +23,10 @@ body {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    padding-bottom: 130px;
     background-repeat: no-repeat;
 }
 .header-conteiner {
-    width: 940px;
+    max-width: 940px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,10 +66,9 @@ a {
 }
 
 .head-title {
-    max-width: 940px;
-    max-height: 159px;
-    padding-top: 89px;
-    padding-bottom: 38px;
+
+    padding-top: 90px;
+    padding-bottom: 160px;
     color: #FFFFFF;
     text-align: center;
 }
@@ -113,7 +114,7 @@ a {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    
+    padding: 0;
 }
 
 .menu-bar__conteiner ul li {
@@ -145,7 +146,7 @@ a {
 }
 
 .footer-conteiner {
-    width: 960px;
+    max-width: 960px;
     display: flex;
     justify-content: space-between;
     padding-top: 23px;
@@ -178,15 +179,13 @@ a {
 
 .log-input-conteiner {
     margin-top: 18px;
-    height: 50px;
-    width: 500px;
+    max-width: 500px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .input-block {
-    width: 375px;
-    height: 50px;
+    max-width: 375px;
     background-color: #FFFFFF;
     border-radius: 3px 0 0 3px;
 }
@@ -195,7 +194,7 @@ a {
     text-align: center;
     justify-content: space-between;
     width: 125px;
-    height: 50px;
+    max-height: 50px;
     border-radius: 0 3px 3px 0;
     background: #FFFFFF47;
 }
@@ -282,20 +281,25 @@ a {
 /* Big Card */
 .big-card{
     position: relative;
-    width: 460px;
+    max-width: 460px;
     height: 280px;
 }
 
 .image-block {
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
     object-position: top center;
     height: 100%;
 }
 
+.image-block-card {
+    object-fit: cover;
+    object-position: top center;
+    max-height: 150px;
+}
 .big-card_conteiner {
-    width: 460px;
-    height: 181px;
+    max-width: 460px;
+    max-height: 181px;
     position: absolute;
     top: 99px;
 }
@@ -393,28 +397,22 @@ a {
 /* Card */
 
 .card-conteiner {
-    width: 296px;
-    height: 291px;
+    max-width: 296px;
+    max-height: 291px;
 
     margin: 6px 12px 12px 12px;
 }
 
-.card-image {
-    line-height: 0;
-    width: 296px;
-    height: 150px;
-}
+
 
 /* Card header */
 .card-line {
-    width: 296px;
     height: 1px;
     margin: 0;
     background-color: #E5E5E5;
 }
 
 .card-title {
-    width: 296px;
     height: 92px;
     background-color: #FFFFFF;
 }
@@ -440,7 +438,6 @@ a {
 
 /* Card footer */
 .card-footer-conteiner {
-    width: 296px;
     height: 48px;
     background-color: #FCFCFC;
     display: flex;
@@ -453,8 +450,9 @@ a {
 .card-footer-block {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 240px;
+    padding-right: 10px;
 }
 
 .card-name {
@@ -467,3 +465,194 @@ a {
     color: #999999;
 }
 
+.escape-header {
+    padding-left: 10px;
+}
+
+.burger-menu {
+    cursor: pointer;
+    width: 27px;
+    height: 20px;
+    display: none; /* Скрываем бургер-меню по умолчанию */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger-bar {
+    width: 100%;
+    height: 2px;
+    background-color: #D9D9D9;
+}
+
+.nav-menu {
+    display: none; /* Скрываем навигационное меню по умолчанию */
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-menu li:last-child {
+    border-bottom: none;
+    
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px 20px;
+}
+
+.nav-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 480px) {
+    .header-conteiner {
+        min-width: 454px;
+    }
+    .head-title {
+        max-width: 350px;
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }
+    .big-card{
+        max-width: 440px;
+    }
+    .card-conteiner {
+        max-width: 440px;
+    }
+    .image-block-card {
+        width: 440px;
+    }
+    .card-footer-block {
+        width: 500px;
+    }
+    .input-block {
+        width: 330px;
+    }
+    .footer-conteiner {
+        min-width: 454px;
+    }
+    .top-list ul {
+        display: none;
+    }
+    .burger-menu {
+        display: flex; 
+    }
+    .nav-menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header-conteiner {
+        min-width: 707px;
+    }
+    .head-title {
+        max-width: 100%;
+        padding-top: 90px;
+        padding-bottom: 160px;
+    }
+    .big-card{
+        max-width: 345px;
+    }
+    .big-card-footer_block {
+        width: 270px;
+    }
+    .card-conteiner {
+        max-width: 222px;
+    }
+    .image-block-card {
+        width: 222px;
+    }
+    .input-block {
+        width: 375px;
+    }
+    .footer-conteiner {
+        min-width: 707px;
+    }
+    .top-list ul {
+        display: flex;
+    }
+    .burger-menu {
+        display: none; 
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header-conteiner {
+        min-width: 940px;
+    }
+    .head-title {
+        max-width: 100%;
+        padding-top: 90px;
+        padding-bottom: 160px;
+    }
+    .big-card{
+        max-width: 460px;
+    }
+    .card-conteiner {
+        max-width: 296px;
+    }
+    .image-block-card {
+        width: 296px;
+    }
+    .input-block {
+        width: 375px;
+    }
+    .footer-conteiner {
+        min-width: 960px;
+    }
+    .top-list ul {
+        display: flex;
+    }
+    .burger-menu {
+        display: none; 
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .header-conteiner {
+        min-width: 940px;
+    }
+    .head-title {
+        max-width: 100%;
+        padding-top: 90px;
+        padding-bottom: 160px;
+    }
+    .big-card{
+        max-width: 460px;
+    }
+    .card-conteiner {
+        max-width: 296px;
+    }
+    .image-block-card {
+        width: 296px;
+    }
+    .input-block {
+        width: 375px;
+    }
+    .footer-conteiner {
+        min-width: 960px;
+    }
+    .top-list ul {
+        display: flex;
+    }
+    .burger-menu {
+        display: none; 
+    }
+}
