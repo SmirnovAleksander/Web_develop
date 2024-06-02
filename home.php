@@ -174,27 +174,29 @@ function getAndPrintPostsFromDB2(mysqli $conn): void
                     <p>Submit</p>
                 </div>
             </div>
-            <div class="footer-blure"></div>
-            <div class="footer-conteiner">
-                <div class="title-escape">
-                    <img src="http://localhost:8001/static/images/img_home/Escape.svg" alt="Escape.">
+            <div class="footer-blure">
+                <div class="footer-conteiner">
+                    <div class="title-escape">
+                        <img src="http://localhost:8001/static/images/img_home/Escape.svg" alt="Escape.">
+                    </div>
+                    <nav class="top-list-footer foot-edit">
+                        <ul class="top-list-footer">
+                            <li>
+                                <a href="#!">Home</a>
+                            </li>
+                            <li>
+                                <a href="#!">Categories</a>
+                            </li>
+                            <li>
+                                <a href="#!">About</a>
+                            </li>
+                            <li>
+                                <a href="#!">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
                 </div>
-                <nav class="top-list foot-edit">
-                    <ul class="top-list">
-                        <li>
-                            <a href="#!">Home</a>
-                        </li>
-                        <li>
-                            <a href="#!">Categories</a>
-                        </li>
-                        <li>
-                            <a href="#!">About</a>
-                        </li>
-                        <li>
-                            <a href="#!">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </footer>

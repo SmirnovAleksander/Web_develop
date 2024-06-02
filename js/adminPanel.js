@@ -448,7 +448,7 @@ function handleInput() {
       author_url: imageAuthor,
       publish_date: inputDataDate,
       image_url: imageBack,
-      featured: 0,
+      featured: 1,
       card_url: imagePost,
     };
 
