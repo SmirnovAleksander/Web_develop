@@ -58,8 +58,8 @@ function getAndPrintPostsFromDB2(mysqli $conn): void
     <link rel="preconnect" href="http://fonts.googleapis.com">
     <link rel="preconnect" href="http://fonts.gstatic.com" crossorigin>
     <link href="http://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="../js/home.js" defer></script>
-    <title>Lab_4</title>
+    <script src="../js/burgerMenu.js" defer></script>
+    <title>Web_dev</title>
 </head>
 
 <body>
@@ -195,7 +195,6 @@ function getAndPrintPostsFromDB2(mysqli $conn): void
                             </li>
                         </ul>
                     </nav>
-                    
                 </div>
             </div>
         </div>

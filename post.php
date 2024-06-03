@@ -49,31 +49,47 @@ function getAndPrintPostsFromDB1(mysqli $conn): void
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
+    <script src="../js/burgerMenu.js" defer></script>
     <title>Lab_1</title>
 </head>
 
 <body>
     <header>
-        <div class="header-conteiner">
-            <div>
-                <img src="http://localhost:8001/static/images/img_post/Escape.svg" alt="Escape.">
+        <div class="header-wrapper">
+            <div class="header-conteiner">
+                <div class="escape-header">
+                    <img src="http://localhost:8001/static/images/img_post/Escape.svg" alt="Escape.">
+                </div>
+                <nav class="top-list head-edit">
+                    <ul>
+                        <li>
+                            <a href="#!">Home</a>
+                        </li>
+                        <li>
+                            <a href="#!">Categories</a>
+                        </li>
+                        <li>
+                            <a href="#!">About</a>
+                        </li>
+                        <li>
+                            <a href="#!">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="burger-menu" id="burger-menu">
+                    <span class="burger-bar"></span>
+                    <span class="burger-bar"></span>
+                    <span class="burger-bar"></span>
+                </div>
+                <nav class="nav-menu" id="nav-menu">
+                    <ul>
+                        <li><a href="#!">Home</a></li>
+                        <li><a href="#!">Categories</a></li>
+                        <li><a href="#!">About</a></li>
+                        <li><a href="#!">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="top-list head-edit">
-                <ul>
-                    <li>
-                        <a href="#!">Home</a>
-                    </li>
-                    <li>
-                        <a href="#!">Categories</a>
-                    </li>
-                    <li>
-                        <a href="#!">About</a>
-                    </li>
-                    <li>
-                        <a href="#!">Contact</a>
-                    </li>
-                </ul>
-            </nav>
         </div>
     </header>
     <?php
@@ -95,27 +111,29 @@ function getAndPrintPostsFromDB1(mysqli $conn): void
                     <p>Submit</p>
                 </div>
             </div>
-            <div class="footer-blure"></div>
-            <div class="footer-conteiner">
-                <div class="title-escape">
-                    <img src="http://localhost:8001/static/images/img_post/Escape_white.svg" alt="Escape.">
+            <div class="footer-blure">
+                <div class="footer-conteiner">
+                    <div class="title-escape">
+                        <img src="http://localhost:8001/static/images/img_home/Escape.svg" alt="Escape.">
+                    </div>
+                    <nav class="top-list-footer foot-edit">
+                        <ul class="top-list-footer">
+                            <li>
+                                <a href="#!">Home</a>
+                            </li>
+                            <li>
+                                <a href="#!">Categories</a>
+                            </li>
+                            <li>
+                                <a href="#!">About</a>
+                            </li>
+                            <li>
+                                <a href="#!">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
                 </div>
-                <nav class="top-list foot-edit">
-                    <ul class="top-list">
-                        <li>
-                            <a href="#!">Home</a>
-                        </li>
-                        <li>
-                            <a href="#!">Categories</a>
-                        </li>
-                        <li>
-                            <a href="#!">About</a>
-                        </li>
-                        <li>
-                            <a href="#!">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </footer>
