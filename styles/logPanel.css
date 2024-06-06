@@ -4,7 +4,14 @@
     border: 0;
     list-style: none;
     text-decoration: none;
-    
+
+}
+
+:active,
+:hover,
+:focus {
+    outline: 0;
+    outline-offset: 0;
 }
 
 p {
@@ -27,7 +34,6 @@ body {
     width: 100vw;
     background-repeat: no-repeat;
     display: flex;
-    position: relative;
 }
 
 .log-conteiner {
@@ -41,6 +47,7 @@ body {
     border-radius: 3px;
     background-color: rgba(255, 255, 255, 1);
 }
+
 .log-in-title {
     position: relative;
     padding: 56px 0 0 40px;
@@ -61,6 +68,7 @@ body {
     padding-top: 50px;
     padding-left: 40px;
     gap: 40px;
+    margin-bottom: 30px;
 }
 
 .log-in-input {
@@ -87,6 +95,7 @@ body {
     text-align: left;
 
 }
+
 .input-block {
     height: 40px;
     width: 400px;
@@ -102,6 +111,25 @@ body {
     background-color: #FFFFFF;
 }
 
+.input-block_email {
+    height: 40px;
+    width: 400px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-self: stretch;
+    box-sizing: content-box;
+    align-items: flex-start;
+    border-color: rgba(234, 234, 234, 1);
+    border-style: solid;
+    border-width: 0 0 1px;
+    background-color: #FFFFFF;
+}
+
+.input-block_password {
+    height: 40px;
+    width: 360px;
+}
 
 .icon-eye {
     left: 372px;
@@ -109,6 +137,7 @@ body {
     width: 24px;
     height: 24px;
     position: absolute;
+    cursor: pointer;
 }
 
 .log-in-button {
@@ -116,8 +145,19 @@ body {
     display: block;
     border-radius: 2px;
     background-color: #DD783F;
-    
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
+
+.log-in-button:hover {
+    background-color: #ca8f6d; 
+}
+
+.log-in-button:active {
+    transform: scale(0.8);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
 .log-in-button p {
     margin: 0;
     padding: 0;
@@ -127,7 +167,79 @@ body {
     line-height: 24px;
     text-align: left;
     color: #FFFFFF;
+}
 
+
+.error-box_emptyError {
+    margin: 16px 40px 0 40px;
+    height: 44px;
+    background-color: #FFEBEA;
+    border-radius: 5px;
+    display: none;
+    position: relative;
+    border-style: solid;
+    border-width: 0 0 0 2px;
+    border-color: #E86961;
+}
+
+.error-box_incorrectData {
+    margin: 16px 40px 0 40px;
+    height: 44px;
+    background-color: #FFEBEA;
+    border-radius: 5px;
+    display: none;
+    position: relative;
+    border-style: solid;
+    border-width: 0 0 0 2px;
+    border-color: #E86961;
+}
+
+.error-box {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    height: 20px;
+    align-items: center;
+}
+
+.error-box p {
+    padding-left: 10px;
+    color: #2E2E2E;
+    font-family: Oxygen;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+}
+
+.errorMessage_EmailEmpty {
+    display: none;
+    font-family: Oxygen;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    color: red;
+}
+.errorMessage_IncorrectFormatEmail {
+    display: none;
+    font-family: Oxygen;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    color: red;
+}
+
+.errorMessage_Password {
+    display: none;
+    font-family: Oxygen;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    color: red;
 }
 
 .header-conteiner {
